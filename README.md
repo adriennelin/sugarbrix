@@ -8,14 +8,14 @@ SugarBrix is a data visualization of sugar levels in common foods.
 
 The goal is to bring greater awareness of sugar in everyday foods through interactive graphics.
 
-### MVPs
+### Functionality & MVP
 + Database of 100+ food items and sugar content
 + Animated transitions of sugar levels
 + Filter by categories - fruits, drinks, breakfast items, desserts, etc.
 + Search by specific food names
 + Infographic of AHA recommended sugar levels
 
-### Wireframes
+### Wireframe
 SugarBrix is a single page app with interactive graphics. 
 Content regenerates depending on the following user actions: 
 + filter by category
@@ -58,3 +58,9 @@ Content regenerates depending on the following user actions:
 - [ ] Create infographic of AHA sugar levels
 - [ ] Complete styling
 - [ ] Create production README.md
+
+### Bonus Features
+Possible features for future implementation:
+- [ ] Sugar calculator - Calculate total sugar for selected items
+- [ ] Side by side comparison - Detail comparison view of two items
+- [ ] Sugar guideline calculator - Tailored recommended sugar intake based on AHA guidelines and user input
