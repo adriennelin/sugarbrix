@@ -34,7 +34,8 @@ Content regenerates depending on the following user actions:
 + `food.csv` -  store all sugar data and image except for units of measurement
 + `benchmarks.csv` - store sugar data and image urls for the three units of measurement
 + `sugarbrix.js` - JS structure and D3
-+ `index.html` - all HTMl and CSS
++ `index.html` - all HTMl
++ `sugarbrix.css` - all CSS
 
 ### Implementation Timeline
 #### Over the weekend:
@@ -42,7 +43,7 @@ Content regenerates depending on the following user actions:
 - [x] Start collecting food data and images
 
 #### Day 1: Setup and seeds
-- [ ] Set up Node structure
+- [ ] Set up project structure
 - [ ] Learn more about D3
 - [ ] Determine food categories and add data for 100 food items (image and sugar content)
 
