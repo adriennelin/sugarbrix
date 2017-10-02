@@ -29,14 +29,12 @@ Content regenerates depending on the following user actions:
 + Vanilla JavaScript for overall structure
 + D3 for DOM manipulation and rendering
 + CSS for styling
-+ Webpack to bundle scripts
 
 ### Structure
 + `food.csv` -  store all sugar data and image except for units of measurement
 + `benchmarks.csv` - store sugar data and image urls for the three units of measurement
-+ `index.html` - all HTMl and D3 logic
-+ `sugarbrix.css` - all CSS
-
++ `sugarbrix.js` - JS structure and D3
++ `index.html` - all HTMl and CSS
 
 ### Implementation Timeline
 #### Over the weekend:
@@ -44,7 +42,7 @@ Content regenerates depending on the following user actions:
 - [x] Start collecting food data and images
 
 #### Day 1: Setup and seeds
-- [ ] Set up Node and Webpack
+- [ ] Set up Node structure
 - [ ] Learn more about D3
 - [ ] Determine food categories and add data for 100 food items (image and sugar content)
 
