@@ -31,8 +31,8 @@ Content regenerates depending on the following user actions:
 + CSS for styling
 
 ### Structure
-+ `food.csv` -  store all sugar data and image except for units of measurement
-+ `benchmarks.csv` - store sugar data and image urls for the three units of measurement
++ `food.json` -  store all sugar data and image_urls except for the benchmark units of measurement
++ `benchmarks.json` - store sugar data and image urls for benchmark foods
 + `sugarbrix.js` - JS structure and D3
 + `index.html` - all HTMl
 + `sugarbrix.css` - all CSS
