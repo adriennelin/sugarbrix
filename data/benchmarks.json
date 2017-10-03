@@ -1,0 +1,22 @@
+benchmark=[{
+  "category" : "benchmark",
+  "name" : "teaspoon",
+  "description" : "1 teaspoon",
+  "sugar_per_unit_in_g" : "4",
+  "unit_weight_in_g" : "4",
+  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1507056029/sugarbrix/teaspoon_sugar.jpg"
+}, {
+  "category" : "benchmark",
+  "name" : "doughnut",
+  "description" : "1 doughnut",
+  "sugar_per_unit_in_g" : "10",
+  "unit_weight_in_g" : "49",
+  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1507056030/sugarbrix/donut.png"
+}, {
+  "category" : "benchmark",
+  "name" : "kiss",
+  "description" : "1 kiss",
+  "sugar_per_unit_in_g" : "2.6",
+  "unit_weight_in_g" : "5.67",
+  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1507056029/sugarbrix/hersheys_kiss.jpg"
+}]

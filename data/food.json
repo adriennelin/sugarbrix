@@ -1,4 +1,4 @@
-[{
+food=[{
   "category" : "fruit",
   "name" : "apple",
   "description" : "1 medium (3\" dia)",
@@ -418,4 +418,4 @@
   "sugar_per_unit_in_g" : "27",
   "unit_weight_in_g" : "105",
   "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1507009349/sugarbrix/INO_milkshake.jpg"
-}
+}]

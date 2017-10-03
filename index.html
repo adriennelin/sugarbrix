@@ -3,35 +3,47 @@
   <head>
     <meta charset="utf-8">
     <title>SugarBrix</title>
-    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/application.css">
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="data/food.json"></script>
+    <script src="data/benchmarks.json"></script>
   </head>
   <body>
-  <script src="https://d3js.org/d3.v4.min.js"></script>
-  <script>
+    <script>
+    console.log(food[0].category);
 
-  const margin = {top: 30, right: 30, bottom: 30, left: 30},
-    width = 960 - margin.left - margin.right,
-    height = 500 - margin.top - margin.bottom;
+    const margin = {top: 30, right: 30, bottom: 30, left: 30},
+      width = 960 - margin.left - margin.right,
+      height = 500 - margin.top - margin.bottom;
 
-  const svg = d3.select("body").append("svg")
-    .attr("width", width + margin.left + margin.right)
-    .attr("height", height + margin.top + margin.bottom).append("g")
-    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+    const svg = d3.select("body").append("svg")
+      .attr("width", width + margin.left + margin.right)
+      .attr("height", height + margin.top + margin.bottom).append("g")
+      .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-  const x = d3.scaleOrdinal()
-    .range([0, width]);
+    const xScale = d3.scaleOrdinal()
+      .range([0, width]);
 
-  const y = d3.scaleOrdinal()
-    .range([height, 0]);
+    const yScale = d3.scaleOrdinal()
+      .range([height, 0]);
 
-  const xAxis = d3.axisBottom(x);
-  const yAxis = d3.axisRight(x);
+    const xAxis = d3.axisBottom(xScale);
+    const yAxis = d3.axisRight(yScale);
 
-  svg.append("g")
-    .attr("class", "y axis")
-    .call(yAxis);
+    svg.append("g")
+      .attr("class", "y axis")
+      .call(yAxis);
 
 
+    svg.selectAll("food-img")
+      .data(food)
+      .enter()
+      .append("svg:food-img")
+      .attr("x", 100)
+      .attr("y", (foodItem, index) => {return (height - index);})
+      .attr("width", 100)
+      .attr("height", 100)
+      .attr("fill", "#2d578b")
 
   </script>
   </body>
