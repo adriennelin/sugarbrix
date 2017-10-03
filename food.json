@@ -1,0 +1,260 @@
+[{
+  "category" : "fruit",
+  "name" : "apple",
+  "description" : "1 medium (3\" dia)",
+  "sugar_per_unit_in_g" : "19",
+  "unit_weight_in_g" : "182",
+  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506989590/sugarbrix/apple_PNG12489.png"
+}, {
+  "category" : "fruit",
+  "name" : "avocado",
+  "description" : "1 medium",
+  "sugar_per_unit_in_g" : "1.3",
+  "unit_weight_in_g" : "201",
+  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506989590/sugarbrix/avocado_PNG15489.png"
+}, {
+  "category" : "fruit",
+  "name" : "banana",
+  "description" : "1 medium (7\" long)",
+  "sugar_per_unit_in_g" : "14",
+  "unit_weight_in_g" : "118",
+  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506989590/sugarbrix/banana_PNG842.png"
+}, {
+  "category" : "fruit",
+  "name" : "blueberries",
+  "description" : "1 cup",
+  "sugar_per_unit_in_g" : "15",
+  "unit_weight_in_g" : "148",
+  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506989591/sugarbrix/blueberries_PNG71.png"
+}, {
+  "category" : "fruit",
+  "name" : "cherries",
+  "description" : "1 cup",
+  "sugar_per_unit_in_g" : "9",
+  "unit_weight_in_g" : "103",
+  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506989592/sugarbrix/cherry_PNG629.png"
+}, {
+  "category" : "fruit",
+  "name" : "figs",
+  "description" : "1 cup",
+  "sugar_per_unit_in_g" : "73",
+  "unit_weight_in_g" : "261",
+  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506989592/sugarbrix/Fig2.jpg"
+}, {
+  "category" : "fruit",
+  "name" : "grapes",
+  "description" : "1 cup",
+  "sugar_per_unit_in_g" : "15",
+  "unit_weight_in_g" : "92",
+  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506989922/sugarbrix/grape_PNG517.png"
+}, {
+  "category" : "fruit",
+  "name" : "grapefruit",
+  "description" : "0.5 fruit (3.5\" dia)",
+  "sugar_per_unit_in_g" : "8",
+  "unit_weight_in_g" : "123",
+  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506989591/sugarbrix/grapefruit_PNG15271.png"
+}, {
+  "category" : "fruit",
+  "name" : "lemon",
+  "description" : "1 fruit (2\" dia)",
+  "sugar_per_unit_in_g" : "1.5",
+  "unit_weight_in_g" : "58",
+  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506989592/sugarbrix/lemon_PNG25275.png"
+}, {
+  "category" : "fruit",
+  "name" : "lychee",
+  "description" : "1 cup",
+  "sugar_per_unit_in_g" : "29",
+  "unit_weight_in_g" : "190",
+  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506989999/sugarbrix/lychee.jpg"
+}, {
+  "category" : "fruit",
+  "name" : "mango",
+  "description" : "1 fruit without refuse",
+  "sugar_per_unit_in_g" : "46",
+  "unit_weight_in_g" : "336",
+  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506989589/sugarbrix/mango_PNG9171.png"
+}, {
+  "category" : "fruit",
+  "name" : "orange",
+  "description" : "1 medium (2.5\" dia)",
+  "sugar_per_unit_in_g" : "12",
+  "unit_weight_in_g" : "131",
+  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506989589/sugarbrix/orange_PNG804.png"
+}, {
+  "category" : "fruit",
+  "name" : "peach",
+  "description" : "1 medium (2.5\" dia)",
+  "sugar_per_unit_in_g" : "13",
+  "unit_weight_in_g" : "150",
+  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506989590/sugarbrix/peach_PNG4869.png"
+}, {
+  "category" : "fruit",
+  "name" : "pineapple",
+  "description" : "1 cup, chunks",
+  "sugar_per_unit_in_g" : "16",
+  "unit_weight_in_g" : "165",
+  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506989590/sugarbrix/pineapple_PNG2759.png"
+}, {
+  "category" : "fruit",
+  "name" : "pomegranate",
+  "description" : "0.5 cup seeds",
+  "sugar_per_unit_in_g" : "12",
+  "unit_weight_in_g" : "87",
+  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506989590/sugarbrix/pomegranate_PNG8647.png"
+}, {
+  "category" : "fruit",
+  "name" : "raspberries",
+  "description" : "1 cup",
+  "sugar_per_unit_in_g" : "5",
+  "unit_weight_in_g" : "123",
+  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506989591/sugarbrix/raspberry_PNG5050.png"
+}, {
+  "category" : "fruit",
+  "name" : "strawberries",
+  "description" : "1 cup, whole",
+  "sugar_per_unit_in_g" : "7",
+  "unit_weight_in_g" : "144",
+  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506989922/sugarbrix/strawberry_PNG2598.png"
+}, {
+  "category" : "drinks",
+  "name" : "beer",
+  "description" : "12 oz bottle",
+  "sugar_per_unit_in_g" : "0",
+  "unit_weight_in_g" : "355",
+  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506989590/sugarbrix/avocado_PNG15489.png"
+}, {
+  "category" : "drinks",
+  "name" : "Arizona Lemon Iced Tea",
+  "description" : "24 oz can",
+  "sugar_per_unit_in_g" : "66",
+  "unit_weight_in_g" : "710",
+  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506989590/sugarbrix/avocado_PNG15489.png"
+}, {
+  "category" : "drinks",
+  "name" : "tea",
+  "description" : "8 oz cup",
+  "sugar_per_unit_in_g" : "0",
+  "unit_weight_in_g" : "237",
+  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506989590/sugarbrix/avocado_PNG15489.png"
+}, {
+  "category" : "drinks",
+  "name" : "milk bubble tea",
+  "description" : "16 oz",
+  "sugar_per_unit_in_g" : "36",
+  "unit_weight_in_g" : "473",
+  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506989590/sugarbrix/avocado_PNG15489.png"
+}, {
+  "category" : "drinks",
+  "name" : "coffee",
+  "description" : "8 oz cup",
+  "sugar_per_unit_in_g" : "0",
+  "unit_weight_in_g" : "237",
+  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506989590/sugarbrix/avocado_PNG15489.png"
+}, {
+  "category" : "drinks",
+  "name" : "Coke",
+  "description" : "12 oz can",
+  "sugar_per_unit_in_g" : "39",
+  "unit_weight_in_g" : "355",
+  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506989590/sugarbrix/avocado_PNG15489.png"
+}, {
+  "category" : "drinks",
+  "name" : "Diet Coke",
+  "description" : "12 oz can",
+  "sugar_per_unit_in_g" : "0",
+  "unit_weight_in_g" : "355",
+  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506989590/sugarbrix/avocado_PNG15489.png"
+}, {
+  "category" : "drinks",
+  "name" : "Starbucks Green Tea Creme Frappuccino",
+  "description" : "Grande 16 oz",
+  "sugar_per_unit_in_g" : "65",
+  "unit_weight_in_g" : "473",
+  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506989590/sugarbrix/avocado_PNG15489.png"
+}, {
+  "category" : "drinks",
+  "name" : "McDonald's McCafé Mocha",
+  "description" : "Medium 16 oz",
+  "sugar_per_unit_in_g" : "41",
+  "unit_weight_in_g" : "356",
+  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506989590/sugarbrix/avocado_PNG15489.png"
+}, {
+  "category" : "drinks",
+  "name" : "Mountain Dew",
+  "description" : "12 oz can",
+  "sugar_per_unit_in_g" : "46",
+  "unit_weight_in_g" : "355",
+  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506989590/sugarbrix/avocado_PNG15489.png"
+}, {
+  "category" : "drinks",
+  "name" : "orange juice",
+  "description" : "8 oz cup",
+  "sugar_per_unit_in_g" : "21",
+  "unit_weight_in_g" : "248",
+  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506989590/sugarbrix/avocado_PNG15489.png"
+}, {
+  "category" : "drinks",
+  "name" : "Pepsi",
+  "description" : "12 oz can",
+  "sugar_per_unit_in_g" : "41",
+  "unit_weight_in_g" : "355",
+  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506989590/sugarbrix/avocado_PNG15489.png"
+}, {
+  "category" : "drinks",
+  "name" : "Starbucks Pumpkin Spice Latte",
+  "description" : "Grande 16 oz",
+  "sugar_per_unit_in_g" : "50",
+  "unit_weight_in_g" : "473",
+  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506989590/sugarbrix/avocado_PNG15489.png"
+}, {
+  "category" : "drinks",
+  "name" : "red wine",
+  "description" : "5 oz glass",
+  "sugar_per_unit_in_g" : ".9",
+  "unit_weight_in_g" : "147",
+  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506989590/sugarbrix/avocado_PNG15489.png"
+}, {
+  "category" : "drinks",
+  "name" : "white wine",
+  "description" : "5 oz glass",
+  "sugar_per_unit_in_g" : "1.4",
+  "unit_weight_in_g" : "147",
+  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506989590/sugarbrix/avocado_PNG15489.png"
+}, {
+  "category" : "drinks",
+  "name" : "Red Bull",
+  "description" : "12 oz can",
+  "sugar_per_unit_in_g" : "37",
+  "unit_weight_in_g" : "369",
+  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506989590/sugarbrix/avocado_PNG15489.png"
+}, {
+  "category" : "drinks",
+  "name" : "Rock Star",
+  "description" : "16 oz can",
+  "sugar_per_unit_in_g" : "62",
+  "unit_weight_in_g" : "473",
+  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506989590/sugarbrix/avocado_PNG15489.png"
+}, {
+  "category" : "drinks",
+  "name" : "beer",
+  "description" : "12 oz bottle",
+  "sugar_per_unit_in_g" : "0",
+  "unit_weight_in_g" : "356",
+  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506989590/sugarbrix/avocado_PNG15489.png"
+}, {
+  "category" : "drinks",
+  "name" : "beer",
+  "description" : "12 oz bottle",
+  "sugar_per_unit_in_g" : "0",
+  "unit_weight_in_g" : "356",
+  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506989590/sugarbrix/avocado_PNG15489.png"
+}, {
+  "category" : "drinks",
+  "name" : "beer",
+  "description" : "12 oz bottle",
+  "sugar_per_unit_in_g" : "0",
+  "unit_weight_in_g" : "356",
+  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506989590/sugarbrix/avocado_PNG15489.png"
+}
