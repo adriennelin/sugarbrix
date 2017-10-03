@@ -252,9 +252,170 @@
   "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506990487/sugarbrix/vita_coco_11.1oz.jpg"
 }, {
   "category" : "fast food",
-  "name" : "beer",
-  "description" : "1 ",
+  "name" : "Spicy Chicken Sandwich - Chick-fil-A",
+  "description" : "1 sandwich",
+  "sugar_per_unit_in_g" : "5",
+  "unit_weight_in_g" : "170",
+  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1507007462/sugarbrix/CFA_Spicy-Chick-Fil-A-Sandwich.png"
+}, {
+  "category" : "fast food",
+  "name" : "Waffle Fries - Chick-fil-A",
+  "description" : "medium size",
+  "sugar_per_unit_in_g" : "5",
+  "unit_weight_in_g" : "170",
+  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1507007462/sugarbrix/CFA_Spicy-Chick-Fil-A-Sandwich.png"
+}, {
+  "category" : "fast food",
+  "name" : "Pepperoni Pizza - Dominos",
+  "description" : "1 slice - 14\" large pizza",
+  "sugar_per_unit_in_g" : "3",
+  "unit_weight_in_g" : "124",
+  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1507007462/sugarbrix/dominos_pizza_slice.png"
+}, {
+  "category" : "fast food",
+  "name" : "Double Double - In-N-Out",
+  "description" : "1 sandwich",
+  "sugar_per_unit_in_g" : "10",
+  "unit_weight_in_g" : "330",
+  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1507007461/sugarbrix/INO_double-double.jpg"
+}, {
+  "category" : "fast food",
+  "name" : "Big Mac - McDonald's",
+  "description" : "1 sandwich",
+  "sugar_per_unit_in_g" : "9",
+  "unit_weight_in_g" : "219",
+  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1507007462/sugarbrix/mcdonalds_big_mac.png"
+}, {
+  "category" : "fast food",
+  "name" : "Chicken McNuggets - McDonald's",
+  "description" : "6 pieces",
+  "sugar_per_unit_in_g" : ".1",
+  "unit_weight_in_g" : "95",
+  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1507007463/sugarbrix/mcdonalds_chicken_nuggets.png"
+}, {
+  "category" : "fast food",
+  "name" : "Fries - McDonald's",
+  "description" : "medium size",
+  "sugar_per_unit_in_g" : ".2",
+  "unit_weight_in_g" : "117",
+  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1507007462/sugarbrix/mcdonalds_fries.png"
+}, {
+  "category" : "fast food",
+  "name" : "Fried Chicken - Popeyes",
+  "description" : "1 thigh and 1 leg",
   "sugar_per_unit_in_g" : "0",
-  "unit_weight_in_g" : "356",
-  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506989590/sugarbrix/avocado_PNG15489.png"
+  "unit_weight_in_g" : "200",
+  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1507007463/sugarbrix/popeyes-chicken.jpg"
+}, {
+  "category" : "fast food",
+  "name" : "Cheesy Gordita Crunch - Taco Bell",
+  "description" : "1 gordita crunch",
+  "sugar_per_unit_in_g" : "4",
+  "unit_weight_in_g" : "174",
+  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1507007463/sugarbrix/taco_bell_cheesy_gordita_crunch.png"
+}, {
+  "category" : "fast food",
+  "name" : "Crunchwrap Supreme - Taco Bell",
+  "description" : "1 crunchwrap",
+  "sugar_per_unit_in_g" : "6",
+  "unit_weight_in_g" : "260",
+  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1507007463/sugarbrix/taco_bell_crunch_wrap_supreme.png"
+}, {
+  "category" : "fast food",
+  "name" : "Spicy Chicken Sandwich - Wendy's",
+  "description" : "1 crunchwrap",
+  "sugar_per_unit_in_g" : "6",
+  "unit_weight_in_g" : "244",
+  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1507007463/sugarbrix/wendys_spicy_chicken_sandwich.png"
+}, {
+  "category" : "fast food",
+  "name" : "Chicago Dog - Wienerschnitzel",
+  "description" : "1 hot dog",
+  "sugar_per_unit_in_g" : "12",
+  "unit_weight_in_g" : "257",
+  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1507007463/sugarbrix/taco_bell_crunch_wrap_supreme.png"
+}, {
+  "category" : "dessert",
+  "name" : "Strawberry Milkshake - In-N-Out",
+  "description" : "15 oz",
+  "sugar_per_unit_in_g" : "67",
+  "unit_weight_in_g" : "427",
+  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1507009349/sugarbrix/INO_milkshake.jpg"
+}, {
+  "category" : "dessert",
+  "name" : "Chocolate Milkshake - In-N-Out",
+  "description" : "15 oz",
+  "sugar_per_unit_in_g" : "65",
+  "unit_weight_in_g" : "427",
+  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1507009349/sugarbrix/INO_milkshake.jpg"
+}, {
+  "category" : "dessert",
+  "name" : "McFlurry with M&M's - McDonald's",
+  "description" : "16 oz",
+  "sugar_per_unit_in_g" : "57",
+  "unit_weight_in_g" : "460",
+  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1507009349/sugarbrix/INO_milkshake.jpg"
+}, {
+  "category" : "dessert",
+  "name" : "Baked Apple Pie - McDonald's",
+  "description" : "1 pie",
+  "sugar_per_unit_in_g" : "13",
+  "unit_weight_in_g" : "77",
+  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1507009349/sugarbrix/INO_milkshake.jpg"
+}, {
+  "category" : "dessert",
+  "name" : "Fried Apple Pie - McDonald's",
+  "description" : "1 pie",
+  "sugar_per_unit_in_g" : "7",
+  "unit_weight_in_g" : "77",
+  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1507009349/sugarbrix/INO_milkshake.jpg"
+}, {
+  "category" : "dessert",
+  "name" : "Royal OREO Blizzard Filled with Fudge - Dairy Queen",
+  "description" : "Medium 16 oz",
+  "sugar_per_unit_in_g" : "119",
+  "unit_weight_in_g" : "460",
+  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1507009349/sugarbrix/INO_milkshake.jpg"
+}, {
+  "category" : "dessert",
+  "name" : "OREO Dream Extreme Cheesecake - Cheesecake Factory",
+  "description" : "1 slice",
+  "sugar_per_unit_in_g" : "151",
+  "unit_weight_in_g" : "400",
+  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1507009349/sugarbrix/INO_milkshake.jpg"
+}, {
+  "category" : "dessert",
+  "name" : "Original Pretzel - Auntie Anne's",
+  "description" : "1 pretzel",
+  "sugar_per_unit_in_g" : "10",
+  "unit_weight_in_g" : "123",
+  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1507009349/sugarbrix/INO_milkshake.jpg"
+}, {
+  "category" : "dessert",
+  "name" : "Classic Roll - Cinnabon",
+  "description" : "1 roll",
+  "sugar_per_unit_in_g" : "58",
+  "unit_weight_in_g" : "268",
+  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1507009349/sugarbrix/INO_milkshake.jpg"
+}, {
+  "category" : "dessert",
+  "name" : "Vanilla Cupcake",
+  "description" : "1 large bakery cupcake",
+  "sugar_per_unit_in_g" : "50",
+  "unit_weight_in_g" : "113",
+  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1507009349/sugarbrix/INO_milkshake.jpg"
+}, {
+  "category" : "dessert",
+  "name" : "Chocolate Chip Cookie",
+  "description" : "1 large cookie",
+  "sugar_per_unit_in_g" : "26",
+  "unit_weight_in_g" : "58",
+  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1507009349/sugarbrix/INO_milkshake.jpg"
+}, {
+  "category" : "dessert",
+  "name" : "Half-baked - Ben & Jerry's",
+  "description" : "1/2 cup",
+  "sugar_per_unit_in_g" : "27",
+  "unit_weight_in_g" : "105",
+  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1507009349/sugarbrix/INO_milkshake.jpg"
 }
