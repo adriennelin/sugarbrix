@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>SugarBrix</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+  </head>
+  <body>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script>
+
+  const margin = {top: 30, right: 30, bottom: 30, left: 30},
+    width = 960 - margin.left - margin.right,
+    height = 500 - margin.top - margin.bottom;
+
+  const svg = d3.select("body").append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom).append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+  const x = d3.scaleOrdinal()
+    .range([0, width]);
+
+  const y = d3.scaleOrdinal()
+    .range([height, 0]);
+
+  const xAxis = d3.axisBottom(x);
+  const yAxis = d3.axisRight(x);
+
+  svg.append("g")
+    .attr("class", "y axis")
+    .call(yAxis);
+
+
+
+  </script>
+  </body>
+</html>

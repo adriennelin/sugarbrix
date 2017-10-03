@@ -1,0 +1,22 @@
+html, body, h1, h2, h3, p, ul, li, dl, dt, dd, textarea, table, tbody, tr, th {
+	margin: 0;
+	padding: 0;
+	border: 0;
+  font: inherit;
+  text-align: inherit;
+  text-decoration: inherit;
+  color: inherit;
+  background: transparent;
+	vertical-align: baseline;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+  }
