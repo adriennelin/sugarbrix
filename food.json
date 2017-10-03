@@ -123,137 +123,137 @@
   "description" : "12 oz bottle",
   "sugar_per_unit_in_g" : "0",
   "unit_weight_in_g" : "355",
-  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506989590/sugarbrix/avocado_PNG15489.png"
+  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506990485/sugarbrix/anchor_steam_bottle.jpg"
 }, {
   "category" : "drinks",
   "name" : "Arizona Lemon Iced Tea",
   "description" : "24 oz can",
   "sugar_per_unit_in_g" : "66",
   "unit_weight_in_g" : "710",
-  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506989590/sugarbrix/avocado_PNG15489.png"
+  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506990485/sugarbrix/arizona-iced-tea-lemon-can.jpg"
 }, {
   "category" : "drinks",
   "name" : "tea",
   "description" : "8 oz cup",
   "sugar_per_unit_in_g" : "0",
   "unit_weight_in_g" : "237",
-  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506989590/sugarbrix/avocado_PNG15489.png"
+  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506997199/sugarbrix/black_tea.jpg"
 }, {
   "category" : "drinks",
-  "name" : "milk bubble tea",
+  "name" : "bubble tea - original milk tea",
   "description" : "16 oz",
   "sugar_per_unit_in_g" : "36",
   "unit_weight_in_g" : "473",
-  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506989590/sugarbrix/avocado_PNG15489.png"
+  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506990486/sugarbrix/bubble_tea.png"
 }, {
   "category" : "drinks",
   "name" : "coffee",
   "description" : "8 oz cup",
   "sugar_per_unit_in_g" : "0",
   "unit_weight_in_g" : "237",
-  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506989590/sugarbrix/avocado_PNG15489.png"
+  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506990486/sugarbrix/coffee_cup.jpg"
 }, {
   "category" : "drinks",
   "name" : "Coke",
   "description" : "12 oz can",
   "sugar_per_unit_in_g" : "39",
   "unit_weight_in_g" : "355",
-  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506989590/sugarbrix/avocado_PNG15489.png"
+  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506990486/sugarbrix/Coke_12oz.png"
 }, {
   "category" : "drinks",
   "name" : "Diet Coke",
   "description" : "12 oz can",
   "sugar_per_unit_in_g" : "0",
   "unit_weight_in_g" : "355",
-  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506989590/sugarbrix/avocado_PNG15489.png"
+  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506990486/sugarbrix/DietCoke_12oz.png"
 }, {
   "category" : "drinks",
   "name" : "Starbucks Green Tea Creme Frappuccino",
   "description" : "Grande 16 oz",
   "sugar_per_unit_in_g" : "65",
   "unit_weight_in_g" : "473",
-  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506989590/sugarbrix/avocado_PNG15489.png"
+  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506990487/sugarbrix/greenteafrapp.jpg"
 }, {
   "category" : "drinks",
   "name" : "McDonald's McCafé Mocha",
   "description" : "Medium 16 oz",
   "sugar_per_unit_in_g" : "41",
-  "unit_weight_in_g" : "356",
-  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506989590/sugarbrix/avocado_PNG15489.png"
+  "unit_weight_in_g" : "355",
+  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506990486/sugarbrix/mcdonald_mccafe_mocha.png"
 }, {
   "category" : "drinks",
   "name" : "Mountain Dew",
   "description" : "12 oz can",
   "sugar_per_unit_in_g" : "46",
   "unit_weight_in_g" : "355",
-  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506989590/sugarbrix/avocado_PNG15489.png"
+  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506990486/sugarbrix/mountain_dew_12oz.jpg"
 }, {
   "category" : "drinks",
   "name" : "orange juice",
   "description" : "8 oz cup",
   "sugar_per_unit_in_g" : "21",
   "unit_weight_in_g" : "248",
-  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506989590/sugarbrix/avocado_PNG15489.png"
+  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506990487/sugarbrix/orange_Juice.jpg"
 }, {
   "category" : "drinks",
   "name" : "Pepsi",
   "description" : "12 oz can",
   "sugar_per_unit_in_g" : "41",
   "unit_weight_in_g" : "355",
-  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506989590/sugarbrix/avocado_PNG15489.png"
+  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506990487/sugarbrix/pepsi_12oz.png"
 }, {
   "category" : "drinks",
   "name" : "Starbucks Pumpkin Spice Latte",
   "description" : "Grande 16 oz",
   "sugar_per_unit_in_g" : "50",
   "unit_weight_in_g" : "473",
-  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506989590/sugarbrix/avocado_PNG15489.png"
+  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506990487/sugarbrix/PSL.jpg"
 }, {
   "category" : "drinks",
   "name" : "red wine",
   "description" : "5 oz glass",
   "sugar_per_unit_in_g" : ".9",
   "unit_weight_in_g" : "147",
-  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506989590/sugarbrix/avocado_PNG15489.png"
+  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506990487/sugarbrix/red_wine_glass.jpg"
 }, {
   "category" : "drinks",
   "name" : "white wine",
   "description" : "5 oz glass",
   "sugar_per_unit_in_g" : "1.4",
   "unit_weight_in_g" : "147",
-  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506989590/sugarbrix/avocado_PNG15489.png"
+  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506990487/sugarbrix/white_wine_glass.jpg"
 }, {
   "category" : "drinks",
   "name" : "Red Bull",
   "description" : "12 oz can",
   "sugar_per_unit_in_g" : "37",
-  "unit_weight_in_g" : "369",
-  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506989590/sugarbrix/avocado_PNG15489.png"
+  "unit_weight_in_g" : "355",
+  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506990487/sugarbrix/redbull_12oz.jpg"
 }, {
   "category" : "drinks",
   "name" : "Rock Star",
   "description" : "16 oz can",
   "sugar_per_unit_in_g" : "62",
   "unit_weight_in_g" : "473",
-  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506989590/sugarbrix/avocado_PNG15489.png"
+  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506990487/sugarbrix/rockstar_16oz.jpg"
 }, {
   "category" : "drinks",
-  "name" : "beer",
-  "description" : "12 oz bottle",
-  "sugar_per_unit_in_g" : "0",
+  "name" : "Sprite",
+  "description" : "12 oz can",
+  "sugar_per_unit_in_g" : "33",
   "unit_weight_in_g" : "356",
-  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506989590/sugarbrix/avocado_PNG15489.png"
+  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506990487/sugarbrix/sprite_can_12oz.jpg"
 }, {
   "category" : "drinks",
-  "name" : "beer",
-  "description" : "12 oz bottle",
-  "sugar_per_unit_in_g" : "0",
-  "unit_weight_in_g" : "356",
-  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506989590/sugarbrix/avocado_PNG15489.png"
+  "name" : "Vita Coco",
+  "description" : "11.1 oz tetra pak",
+  "sugar_per_unit_in_g" : "15",
+  "unit_weight_in_g" : "328",
+  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506990487/sugarbrix/vita_coco_11.1oz.jpg"
 }, {
-  "category" : "drinks",
+  "category" : "fast food",
   "name" : "beer",
-  "description" : "12 oz bottle",
+  "description" : "1 ",
   "sugar_per_unit_in_g" : "0",
   "unit_weight_in_g" : "356",
   "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506989590/sugarbrix/avocado_PNG15489.png"
