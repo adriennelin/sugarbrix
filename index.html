@@ -13,7 +13,7 @@
   </head>
   <body>
   <header>
-    <img src="https://res.cloudinary.com/adrienne/image/upload/c_scale,w_225/v1507104273/sugarbrix/SugarBrix_logo.png" alt="sugarbrix logo">
+    <img src="https://res.cloudinary.com/adrienne/image/upload/c_scale,w_235/v1507104273/sugarbrix/SugarBrix_logo.png" alt="sugarbrix logo">
   <header>
   <div class="main-wrapper">
 
@@ -60,6 +60,7 @@
         </div>
 
       </div>
+
     </div>
     <div class="right-column">
       <div class="added-natural-infographic">
@@ -68,43 +69,7 @@
     </div>
   </div>
 
-  <script>
-  console.log(food[0].category);
-
-  const margin = {top: 30, right: 30, bottom: 30, left: 30},
-    width = 960 - margin.left - margin.right,
-    height = 500 - margin.top - margin.bottom;
-
-  const svg = d3.select("body").append("svg")
-    .attr("width", width + margin.left + margin.right)
-    .attr("height", height + margin.top + margin.bottom).append("g")
-    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-
-  const xScale = d3.scaleOrdinal()
-    .range([0, width]);
-
-  const yScale = d3.scaleOrdinal()
-    .range([height, 0]);
-
-  const xAxis = d3.axisBottom(xScale);
-  const yAxis = d3.axisRight(yScale);
-
-  svg.append("g")
-    .attr("class", "y axis")
-    .call(yAxis);
-
-  svg.selectAll("rect")
-    .data(food)
-    .enter()
-    .append("svg:rect")
-    .attr("x", 100)
-    .attr("y", (foodItem, index) => {return (height - index);})
-    .attr("width", 100)
-    .attr("height", 100)
-    .attr("fill", "#2d578b")
-
-  </script>
-
+  <script src="modules/d3.js"></script>
 
 </body>
 </html>

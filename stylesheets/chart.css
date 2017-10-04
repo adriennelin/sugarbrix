@@ -1,0 +1,14 @@
+.chart-box {
+  margin-top: 50px;
+}
+
+.food-axis {
+  display: flex;
+  flex-direction: column;
+  width: 80px;
+}
+
+.food-img {
+  margin-bottom: 10px;
+  object-fit: scale-down;
+}
