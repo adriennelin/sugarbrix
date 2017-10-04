@@ -1,14 +1,32 @@
 .chart-box {
   margin-top: 50px;
+  height: 500px;
+  overflow: scroll;
 }
 
-.food-axis {
-  display: flex;
-  flex-direction: column;
-  width: 80px;
+.chart-box-svg {
+  height: 2000px;
+}
+
+table {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+table span {
+  vertical-align: middle;
+}
+
+.name {
+  width: 100px;
+  vertical-align: middle;
+}
+
+.equal {
+
 }
 
 .food-img {
-  margin-bottom: 10px;
   object-fit: scale-down;
+  margin: 10px 6px 10px 0px;
 }
