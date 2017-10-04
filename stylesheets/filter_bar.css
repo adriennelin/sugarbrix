@@ -1,0 +1,31 @@
+.toggle {
+  position: relative;
+  display: inline-block;
+  width: 100px;
+  height: 30px;
+}
+
+.toggle input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: "blue";
+  transition: .3s;
+  -webkit-transition: .3s;
+}
+
+.slider:before {
+  position: absolute;
+  content: ""
+}
+
+.input:checked + .slider {
+
+}

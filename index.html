@@ -9,6 +9,44 @@
     <script src="data/benchmarks.json"></script>
   </head>
   <body>
+  <header>
+    <h1>SugarBrix</h1>
+  <header>
+
+    <div class="filter-bar">
+      <!-- <script src=modules/filter_bar.js></script> -->
+      <label for="category">Category</label>
+      <select class="category-dropdown" name="" id="category">
+        <option value="">Breakfast</option>
+        <option value="">Dessert</option>
+        <option value="">Drinks</option>
+        <option value="">Fast Food</option>
+        <option value="">Fruit</option>
+      </select>
+      <label for="sort">Sort</label>
+      <select class="sort-dropdown" name="" id="sort">
+        <option value="">Highest sugar by % of weight</option>
+        <option value="">Lowest sugar by % weight</option>
+        <option value="">Highest sugar per serving</option>
+        <option value="">Lowest sugar per serving</option>
+      </select>
+      <label for="measurement">Unit of Measurement</label>
+      <select class="measurement-dropdown" name="" id="measurement">
+        <option value="">Teaspoon</option>
+        <option value="">Doughnut</option>
+        <option value="">Hershey's Kiss</option>
+      </select>
+      <br>
+      <label class="toggle" for="serving-size">Serving Size</label>
+      <input type="checkbox" class="serving-switch" name="" id="serving-size">
+        <div class="slider">
+          <span class="serving">1 Serving</span>
+          <span class="100g">100 grams</span>
+        </div>
+      </input>
+
+    </div>
+
     <script>
     console.log(food[0].category);
 
@@ -34,11 +72,10 @@
       .attr("class", "y axis")
       .call(yAxis);
 
-
-    svg.selectAll("food-img")
+    svg.selectAll("rect")
       .data(food)
       .enter()
-      .append("svg:food-img")
+      .append("svg:rect")
       .attr("x", 100)
       .attr("y", (foodItem, index) => {return (height - index);})
       .attr("width", 100)
@@ -46,5 +83,7 @@
       .attr("fill", "#2d578b")
 
   </script>
+
+  <div class="food-img"></div>
   </body>
 </html>
