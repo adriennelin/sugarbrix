@@ -4,3 +4,28 @@
   stroke: #000;
   shape-rendering: crispEdges;*/
 }
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #282828;
+  margin: 20px;
+}
+
+.main-wrapper {
+  display: flex;
+  width: auto;
+}
+
+.left-column {
+  width: 75%;
+}
+
+.right-column {
+  width: 25%;
+}
+
+.added-natural-infographic {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  height: 200px;
+}

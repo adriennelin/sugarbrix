@@ -1,31 +1,50 @@
-.toggle {
-  position: relative;
-  display: inline-block;
-  width: 100px;
-  height: 30px;
+.filter-bar {
+  width: 960px;
+  margin-top: 20px;
 }
 
-.toggle input {
-  display: none;
+.selectors {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: "blue";
-  transition: .3s;
-  -webkit-transition: .3s;
+.serving-toggle {
+  margin-top: 25px;
 }
 
-.slider:before {
-  position: absolute;
-  content: ""
+label {
+  font-size: 14px;
+  margin-left: 20px;
+  margin-right: 5px;
 }
 
-.input:checked + .slider {
+select {
+  height: 25px;
+}
+
+input[type=radio] {
+  display:none;
+  margin:10px;
+}
+
+input[type=radio] + label {
+  display:inline-block;
+  margin:-2px;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  background-image: -moz-linear-gradient(top, #ffe7da, #f7c688);
+	background-image: -webkit-linear-gradient(top, #ffe7da, #f7c688);
+	background-image: -o-linear-gradient(top, #ffe7da, #f7c688);
+	background-image: linear-gradient(to bottom, #ffe7da, linear-gradient()#f7c688);
+}
+
+input[type=radio]:checked + label {
+  background-color:#ffd4a9;
+  background-image: none;
+  outline: none;
+	-webkit-box-shadow: inset 0 2px 4px rgba(0,0,0,0.15),0 1px 2px rgba(0,0,0,0.05);
+	-moz-box-shadow: inset 0 2px 4px rgba(0,0,0,0.15),0 1px 2px rgba(0,0,0,0.05);
+	box-shadow: inset 0 2px 4px rgba(0,0,0,0.15),0 1px 2px rgba(0,0,0,0.05);
 
 }

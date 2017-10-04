@@ -7,83 +7,104 @@
     <script src="https://d3js.org/d3.v4.min.js"></script>
     <script src="data/food.json"></script>
     <script src="data/benchmarks.json"></script>
+    <link rel="icon"
+      href="https://res.cloudinary.com/adrienne/image/upload/c_scale,w_30/v1507104987/sugarbrix/sugar_cubes_icon_dark.png">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   </head>
   <body>
   <header>
-    <h1>SugarBrix</h1>
+    <img src="https://res.cloudinary.com/adrienne/image/upload/c_scale,w_225/v1507104273/sugarbrix/SugarBrix_logo.png" alt="sugarbrix logo">
   <header>
+  <div class="main-wrapper">
 
-    <div class="filter-bar">
-      <!-- <script src=modules/filter_bar.js></script> -->
-      <label for="category">Category</label>
-      <select class="category-dropdown" name="" id="category">
-        <option value="">Breakfast</option>
-        <option value="">Dessert</option>
-        <option value="">Drinks</option>
-        <option value="">Fast Food</option>
-        <option value="">Fruit</option>
-      </select>
-      <label for="sort">Sort</label>
-      <select class="sort-dropdown" name="" id="sort">
-        <option value="">Highest sugar by % of weight</option>
-        <option value="">Lowest sugar by % weight</option>
-        <option value="">Highest sugar per serving</option>
-        <option value="">Lowest sugar per serving</option>
-      </select>
-      <label for="measurement">Unit of Measurement</label>
-      <select class="measurement-dropdown" name="" id="measurement">
-        <option value="">Teaspoon</option>
-        <option value="">Doughnut</option>
-        <option value="">Hershey's Kiss</option>
-      </select>
-      <br>
-      <label class="toggle" for="serving-size">Serving Size</label>
-      <input type="checkbox" class="serving-switch" name="" id="serving-size">
-        <div class="slider">
-          <span class="serving">1 Serving</span>
-          <span class="100g">100 grams</span>
+
+    <div class="left-column">
+
+      <div class="filter-bar">
+        <!-- <script src=modules/filter_bar.js></script> -->
+        <div class="selectors">
+          <label for="category">Category</label>
+          <select class="category-dropdown" name="" id="category">
+            <option value="">Breakfast</option>
+            <option value="">Dessert</option>
+            <option value="">Drinks</option>
+            <option value="">Fast Food</option>
+            <option value="">Fruit</option>
+          </select>
+
+          <label for="sort">Sort</label>
+          <select class="sort-dropdown" name="" id="sort">
+            <option value="">Highest sugar by % of weight</option>
+            <option value="">Lowest sugar by % weight</option>
+            <option value="">Highest sugar per serving</option>
+            <option value="">Lowest sugar per serving</option>
+          </select>
+
+          <label for="measurement">Unit of Measurement</label>
+          <select class="measurement-dropdown" name="" id="measurement">
+            <option value="">Teaspoon</option>
+            <option value="">Doughnut</option>
+            <option value="">Hershey's Kiss</option>
+          </select>
         </div>
-      </input>
+
+
+        <div class="serving-toggle">
+          <label for="serving-toggle">Size</label>
+          <input type="radio" id="1serving" name="serving"
+                 value="serving" checked>
+          <label for="serving">1 serving</label>
+          <input type="radio" id="100g" name="serving"
+                 value="grams">
+          <label for="100g">100 grams</label>
+        </div>
+
+      </div>
+    </div>
+    <div class="right-column">
+      <div class="added-natural-infographic">
+      </div>
 
     </div>
+  </div>
 
-    <script>
-    console.log(food[0].category);
+  <script>
+  console.log(food[0].category);
 
-    const margin = {top: 30, right: 30, bottom: 30, left: 30},
-      width = 960 - margin.left - margin.right,
-      height = 500 - margin.top - margin.bottom;
+  const margin = {top: 30, right: 30, bottom: 30, left: 30},
+    width = 960 - margin.left - margin.right,
+    height = 500 - margin.top - margin.bottom;
 
-    const svg = d3.select("body").append("svg")
-      .attr("width", width + margin.left + margin.right)
-      .attr("height", height + margin.top + margin.bottom).append("g")
-      .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+  const svg = d3.select("body").append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom).append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-    const xScale = d3.scaleOrdinal()
-      .range([0, width]);
+  const xScale = d3.scaleOrdinal()
+    .range([0, width]);
 
-    const yScale = d3.scaleOrdinal()
-      .range([height, 0]);
+  const yScale = d3.scaleOrdinal()
+    .range([height, 0]);
 
-    const xAxis = d3.axisBottom(xScale);
-    const yAxis = d3.axisRight(yScale);
+  const xAxis = d3.axisBottom(xScale);
+  const yAxis = d3.axisRight(yScale);
 
-    svg.append("g")
-      .attr("class", "y axis")
-      .call(yAxis);
+  svg.append("g")
+    .attr("class", "y axis")
+    .call(yAxis);
 
-    svg.selectAll("rect")
-      .data(food)
-      .enter()
-      .append("svg:rect")
-      .attr("x", 100)
-      .attr("y", (foodItem, index) => {return (height - index);})
-      .attr("width", 100)
-      .attr("height", 100)
-      .attr("fill", "#2d578b")
+  svg.selectAll("rect")
+    .data(food)
+    .enter()
+    .append("svg:rect")
+    .attr("x", 100)
+    .attr("y", (foodItem, index) => {return (height - index);})
+    .attr("width", 100)
+    .attr("height", 100)
+    .attr("fill", "#2d578b")
 
   </script>
 
-  <div class="food-img"></div>
-  </body>
+
+</body>
 </html>
