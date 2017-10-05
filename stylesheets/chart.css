@@ -5,7 +5,7 @@
 }
 
 .chart-box-svg {
-  height: 2000px;
+  height: 10000px;
 }
 
 table {
@@ -15,6 +15,8 @@ table {
 
 td {
   vertical-align: middle;
+  width: 100px;
+  height: 100px;
 }
 
 .name {
@@ -28,7 +30,7 @@ td {
 }
 
 .benchmark {
-  
+
 }
 
 .sugar-grams {

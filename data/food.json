@@ -354,7 +354,7 @@ food=[{
   "description" : "16 oz",
   "sugar_per_unit_in_g" : "57",
   "unit_weight_in_g" : "460",
-  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1507009349/sugarbrix/INO_milkshake.jpg"
+  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1507009349/sugarbrix/mcFlurry-m_m.jpg"
 }, {
   "category" : "dessert",
   "name" : "Baked Apple Pie - McDonald's",
@@ -375,28 +375,28 @@ food=[{
   "description" : "Medium 16 oz",
   "sugar_per_unit_in_g" : "119",
   "unit_weight_in_g" : "460",
-  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1507009349/sugarbrix/INO_milkshake.jpg"
+  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1507012169/sugarbrix/blizzard-royal-oreo.jpg"
 }, {
   "category" : "dessert",
   "name" : "OREO Dream Extreme Cheesecake - Cheesecake Factory",
   "description" : "1 slice",
   "sugar_per_unit_in_g" : "151",
   "unit_weight_in_g" : "400",
-  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1507009349/sugarbrix/INO_milkshake.jpg"
+  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1507012169/sugarbrix/CCF_OreoDreamExtremeCheesecake.jpg"
 }, {
   "category" : "dessert",
   "name" : "Original Pretzel - Auntie Anne's",
   "description" : "1 pretzel",
   "sugar_per_unit_in_g" : "10",
   "unit_weight_in_g" : "123",
-  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1507009349/sugarbrix/INO_milkshake.jpg"
+  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1507012169/sugarbrix/auntie_annes_orig.jpg"
 }, {
   "category" : "dessert",
   "name" : "Classic Roll - Cinnabon",
   "description" : "1 roll",
   "sugar_per_unit_in_g" : "58",
   "unit_weight_in_g" : "268",
-  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1507009349/sugarbrix/INO_milkshake.jpg"
+  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1507012169/sugarbrix/cinnabon.png"
 }, {
   "category" : "dessert",
   "name" : "Vanilla Cupcake",

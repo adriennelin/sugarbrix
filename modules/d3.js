@@ -10,18 +10,18 @@ const svg = d3.select(".chart-box").append("svg")
   .attr("height", height + margin.top + margin.bottom).append("g")
   .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-const xScale = d3.scaleOrdinal()
-  .range([0, width]);
-
-const yScale = d3.scaleOrdinal()
-  .range([height, 0]);
-
-const xAxis = d3.axisBottom(xScale);
-const yAxis = d3.axisRight(yScale);
-
-svg.append("g")
-  .attr("class", "y axis")
-  .call(yAxis);
+// const xScale = d3.scaleOrdinal()
+//   .range([0, width]);
+//
+// const yScale = d3.scaleOrdinal()
+//   .range([height, 0]);
+//
+// const xAxis = d3.axisBottom(xScale);
+// const yAxis = d3.axisRight(yScale);
+//
+// svg.append("g")
+//   .attr("class", "y axis")
+//   .call(yAxis);
 
 svg.append("foreignObject")
   .attr("width", "100%")
@@ -53,30 +53,18 @@ function updateChart() {
       filtered = food.filter(f => f.category === categoryFilter);
   }
 
-  let displayedSugar = undefined;
-  switch (serving) {
-    case "oneServing":
-      displayedSugar = "f.sugar_per_unit_in_g";
-      break;
-    case "grams":
-      displayedSugar = "f.unit_weight_in_g/100*f.sugar_per_unit_in_g";
-      break;
-    default:
-
-  }
-
 
   switch (sort) {
     case "h-weight":
       filtered.sort( (a,b) => {
-        return a.sugar_per_unit_in_g/a.unit_weight_in_g -
-               b.sugar_per_unit_in_g/b.unit_weight_in_g;
+        return b.sugar_per_unit_in_g/a.unit_weight_in_g -
+               a.sugar_per_unit_in_g/b.unit_weight_in_g;
         });
       break;
     case "l-weight":
       filtered.sort( (a,b) => {
-        return b.sugar_per_unit_in_g/a.unit_weight_in_g -
-               a.sugar_per_unit_in_g/b.unit_weight_in_g;
+        return a.sugar_per_unit_in_g/a.unit_weight_in_g -
+               b.sugar_per_unit_in_g/b.unit_weight_in_g;
         });
     //   break;
     // case "h-serving":
@@ -92,7 +80,7 @@ function updateChart() {
     //     });
     //   break;
     default:
-      filtered.sort( (a,b) => a.category.localCompare(b.category));
+      filtered.sort( (a,b) => a.category.localeCompare(b.category));
   }
 
   let benchmarkUrl = "https://res.cloudinary.com/adrienne/image/upload/v1507056029/sugarbrix/teaspoon_sugar.jpg";
@@ -115,7 +103,7 @@ function updateChart() {
   // }
 
   const tr = tbody.selectAll("tr")
-    .data(filtered)
+    .data(food)
     .enter()
     .append("tr");
 
@@ -129,37 +117,48 @@ function updateChart() {
     .append("img")
     .attr("class", "food-img")
     .attr('src', f => {return f.img_url; })
-    .attr("width", "65px")
-    .attr("height", "55px");
+    .attr("width", "65")
+    .attr("height", "55");
 
   tr.append("td")
     .append("img")
     .attr("class", "equal")
     .attr("src", "https://res.cloudinary.com/adrienne/image/upload/v1507140911/sugarbrix/equal_sign.png")
-    .attr("width", "45px")
-    .attr("height", "25px");
+    .attr("width", "45")
+    .attr("height", "25");
 
   tr.append("defs")
     .append("pattern")
     .attr("id", "bg")
     .attr("patternUnits", "userSpaceOnUse")
-    .attr("width", "50px")
-    .attr("height", "50px")
+    .attr("width", "50")
+    .attr("height", "50")
     .append("image")
-    .attr("xlink:href", benchmarkUrl)
-    .attr("width", "50px")
-    .attr("height", "50px");
+    .attr("xlink:href", "https://res.cloudinary.com/adrienne/image/upload/v1507140911/sugarbrix/equal_sign.png")
+    .attr("width", "50")
+    .attr("height", "50");
 
-  tr.append("td")
-    .append("rect")
-    .attr("class", "benchmark")
-    .attr("height", "50px")
-    .attr("width", "100px")
-    .attr("fill", "url(#bg)");
+    svg.append("td").append("xhtml:svg")
+      .append("rect")
+      .attr("class", "benchmark")
+      .attr("height", "50px")
+      .attr("width", "100px")
+      .attr("fill", "url(#bg)");
 
+  let displayedSugar = undefined;
   tr.append("td")
     .attr("class", "sugar-grams")
-    .html(f => {return f.sugar_per_unit_in_g + 'g'; });
+    .html(f => {
+      switch (serving) {
+        case "oneServing":
+          displayedSugar = f.sugar_per_unit_in_g;
+          break;
+        case "grams":
+          displayedSugar = 100 / f.unit_weight_in_g * f.sugar_per_unit_in_g;
+          break;
+      }
+      return displayedSugar + 'g';
+    });
 }
 
 updateChart();
