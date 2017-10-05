@@ -13,7 +13,7 @@ table {
   font-weight: bold;
 }
 
-table span {
+td {
   vertical-align: middle;
 }
 
@@ -22,11 +22,18 @@ table span {
   vertical-align: middle;
 }
 
-.equal {
-
-}
-
 .food-img {
   object-fit: scale-down;
   margin: 10px 6px 10px 0px;
+}
+
+.benchmark {
+  
+}
+
+.sugar-grams {
+  font-size: 28px;
+  text-align: left;
+  padding-bottom: 6px;
+  padding-left: 6px;
 }

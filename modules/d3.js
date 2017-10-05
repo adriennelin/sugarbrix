@@ -1,4 +1,4 @@
-/* global d3, food */
+/* global d3, food, benchmark */
 
 const margin = {top: 30, right: 30, bottom: 30, left: 30},
   width = 960 - margin.left - margin.right,
@@ -32,15 +32,36 @@ const table = d3.select(".foreign-obj").append("xhtml:table");
 const thead = table.append("thead");
 const tbody = table.append("tbody");
 
-function updateChart(attr, filter) {
-  let filtered = "";
-  if (attr === undefined) {
-    filtered = food;
-  } else {
-    filtered = food.filter(f => `${attr}` === filter);
-  }
+function updateChart() {
 
-  console.log(filtered);
+  const catFilter = d3.select(".cat-dropdown").property("value");
+  const sortFilter = d3.select(".sort-dropdown").property("value");
+  const measureFilter = d3.select(".measure-dropdown").property("value");
+  const servingFilter = d3.select('input[name="serving"]:checked')
+                          .property("value");
+  console.log(catFilter);
+  console.log(sortFilter);
+  console.log(measureFilter);
+  console.log(servingFilter);
+
+  const filtered = food;
+  //
+  // let filtered = "";
+  // switch (attr) {
+  //   case "all":
+  //     filtered = food;
+  //     break;
+  //   case "category":
+  //     filtered = food.filter(f => f.category === filter);
+  //     if (filter === "all") {
+  //       filtered = food;
+  //     }
+  //     break;
+  //   default:
+  //     filtered = food;
+  // }
+
+  // console.log(filtered);
 
   // update.enter().append("img")
   //   .filter(f => { return f.category === filter; } );
@@ -49,7 +70,11 @@ function updateChart(attr, filter) {
   //   .duration(3);
   //
   // update.exit().remove();
-
+  let benchmarkUrl = "https://res.cloudinary.com/adrienne/image/upload/v1507056029/sugarbrix/teaspoon_sugar.jpg";
+  // if (attr === "benchmark") {
+  //   const unit = benchmark.filter( b => b.category === filter );
+  //   benchmarkUrl = unit.img_url;
+  // }
 
   const tr = tbody.selectAll("tr")
     .data(filtered)
@@ -60,34 +85,52 @@ function updateChart(attr, filter) {
     .attr("class", "name");
 
   tr.append("td")
-    .append("span")
     .append("img")
-    .attr('src', f => {return f.img_url; })
     .attr("class", "food-img")
-    .attr("width", 60)
-    .attr("height", 50);
+    .attr('src', f => {return f.img_url; })
+    .attr("width", "65px")
+    .attr("height", "55px");
 
   tr.append("td")
-    .append("span")
     .append("img")
-    .attr('src', "https://res.cloudinary.com/adrienne/image/upload/v1507140911/sugarbrix/equal_sign.png")
     .attr("class", "equal")
-    .attr("width", "50px");
+    .attr("src", "https://res.cloudinary.com/adrienne/image/upload/v1507140911/sugarbrix/equal_sign.png")
+    .attr("width", "45px")
+    .attr("height", "25px");
+
+  tr.append("defs")
+    .append("pattern")
+    .attr("id", "bg")
+    .attr("patternUnits", "userSpaceOnUse")
+    .attr("width", "50px")
+    .attr("height", "50px")
+    .append("image")
+    .attr("xlink:href", benchmarkUrl)
+    .attr("width", "50px")
+    .attr("height", "50px");
 
   tr.append("td")
-    .append("span")
-    .append("img");
+    .append("rect")
+    .attr("class", "benchmark")
+    .attr("height", "50px")
+    .attr("width", "100px")
+    .attr("fill", "url(#bg)");
 
-  const equalCol = d3.select(".foreign-obj")
-    .append("xhtml:div")
-    .attr("class", "equal-col");
+  tr.append("td")
+    .attr("class", "sugar-grams")
+    .html(f => {return f.sugar_per_unit_in_g + 'g'; });
 }
 
 updateChart();
 
-d3.select(".category-dropdown")
-  .on("change", () => {
-    const filter = d3.select(".category-dropdown").property("value");
-    console.log(filter);
-    updateChart("f.category", filter);
-  });
+d3.select(".cat-dropdown")
+  .on("change", () => { updateChart(); });
+
+d3.select(".sort-dropdown")
+  .on("change", () => { updateChart(); });
+
+d3.select(".measure-dropdown")
+  .on("change", () => { updateChart(); });
+
+d3.select(".serving-toggle")
+  .on("change", () => { updateChart(); });

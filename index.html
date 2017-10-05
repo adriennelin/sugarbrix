@@ -8,12 +8,12 @@
     <script src="data/food.json"></script>
     <script src="data/benchmarks.json"></script>
     <link rel="icon"
-      href="https://res.cloudinary.com/adrienne/image/upload/c_scale,w_30/v1507104987/sugarbrix/sugar_cubes_icon_dark.png">
+      href="https://res.cloudinary.com/adrienne/image/upload/c_scale,w_30/v1507178537/sugarbrix/sugar_cubes_dark.png">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   </head>
   <body>
   <header>
-    <img src="https://res.cloudinary.com/adrienne/image/upload/c_scale,w_235/v1507104273/sugarbrix/SugarBrix_logo.png" alt="sugarbrix logo">
+    <img src="https://res.cloudinary.com/adrienne/image/upload/c_scale,w_235/v1507178537/sugarbrix/sugarbrix_logo_darker.png" alt="sugarbrix logo">
   <header>
   <div class="main-wrapper">
 
@@ -22,7 +22,8 @@
         <!-- <script src=modules/filter_bar.js></script> -->
         <div class="selectors">
           <label for="category">Category</label>
-          <select class="category-dropdown" name="" id="category">
+          <select class="cat-dropdown" name="" id="category">
+            <option value="all">All</option>
             <option value="breakfast">Breakfast</option>
             <option value="dessert">Dessert</option>
             <option value="drinks">Drinks</option>
@@ -32,17 +33,17 @@
 
           <label for="sort">Sort</label>
           <select class="sort-dropdown" name="" id="sort">
-            <option value="">Highest sugar by % of weight</option>
-            <option value="">Lowest sugar by % weight</option>
-            <option value="">Highest sugar per serving</option>
-            <option value="">Lowest sugar per serving</option>
+            <option value="h-weight">Highest sugar by % of weight</option>
+            <option value="l-weight">Lowest sugar by % weight</option>
+            <option value="h-serving">Highest sugar per serving</option>
+            <option value="l-serving">Lowest sugar per serving</option>
           </select>
 
           <label for="measurement">Unit of Measurement</label>
-          <select class="measurement-dropdown" name="" id="measurement">
-            <option value="">Teaspoon</option>
-            <option value="">Doughnut</option>
-            <option value="">Hershey's Kiss</option>
+          <select class="measure-dropdown" name="" id="measurement">
+            <option value="teaspoon">Teaspoon</option>
+            <option value="doughnut">Doughnut</option>
+            <option value="kiss">Hershey's Kiss</option>
           </select>
         </div>
 
