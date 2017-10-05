@@ -53,6 +53,53 @@ function updateChart() {
       filtered = food.filter(f => f.category === categoryFilter);
   }
 
+  let displayedSugar = undefined;
+  switch (serving) {
+    case "oneServing":
+      displayedSugar = "f.sugar_per_unit_in_g";
+      break;
+    case "grams":
+      displayedSugar = "f.unit_weight_in_g/100*f.sugar_per_unit_in_g";
+      break;
+    default:
+
+  }
+
+
+  switch (sort) {
+    case "h-weight":
+      filtered.sort( (a,b) => {
+        return a.sugar_per_unit_in_g/a.unit_weight_in_g -
+               b.sugar_per_unit_in_g/b.unit_weight_in_g;
+        });
+      break;
+    case "l-weight":
+      filtered.sort( (a,b) => {
+        return b.sugar_per_unit_in_g/a.unit_weight_in_g -
+               a.sugar_per_unit_in_g/b.unit_weight_in_g;
+        });
+    //   break;
+    // case "h-serving":
+    //   filtered.sort( (a,b) => {
+    //     return b.sugar_per_unit_in_g/a.unit_weight_in_g -
+    //            a.sugar_per_unit_in_g/b.unit_weight_in_g;
+    //     });
+    //   break;
+    // case "l-serving":
+    //   filtered.sort( (a,b) => {
+    //     return b.sugar_per_unit_in_g/a.unit_weight_in_g -
+    //            a.sugar_per_unit_in_g/b.unit_weight_in_g;
+    //     });
+    //   break;
+    default:
+      filtered.sort( (a,b) => a.category.localCompare(b.category));
+  }
+
+  let benchmarkUrl = "https://res.cloudinary.com/adrienne/image/upload/v1507056029/sugarbrix/teaspoon_sugar.jpg";
+  const measureName = benchmark.find( b => b.name === measure);
+  benchmarkUrl = measureName.img_url;
+
+
   console.log(filtered);
 
   // update.enter().append("img")
@@ -62,7 +109,6 @@ function updateChart() {
   //   .duration(3);
   //
   // update.exit().remove();
-  let benchmarkUrl = "https://res.cloudinary.com/adrienne/image/upload/v1507056029/sugarbrix/teaspoon_sugar.jpg";
   // if (attr === "benchmark") {
   //   const unit = benchmark.filter( b => b.category === filter );
   //   benchmarkUrl = unit.img_url;
