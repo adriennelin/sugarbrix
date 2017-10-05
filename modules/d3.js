@@ -102,6 +102,7 @@ function updateChart() {
   //   benchmarkUrl = unit.img_url;
   // }
 
+
   const tr = tbody.selectAll("tr")
     .data(food)
     .enter()
@@ -127,23 +128,29 @@ function updateChart() {
     .attr("width", "45")
     .attr("height", "25");
 
-  tr.append("defs")
+  svg.append("defs")
     .append("pattern")
     .attr("id", "bg")
     .attr("patternUnits", "userSpaceOnUse")
     .attr("width", "50")
     .attr("height", "50")
     .append("image")
-    .attr("xlink:href", "https://res.cloudinary.com/adrienne/image/upload/v1507140911/sugarbrix/equal_sign.png")
-    .attr("width", "50")
-    .attr("height", "50");
+    .attr("xlink:href", benchmarkUrl)
+    .attr("width", "60")
+    .attr("height", "80");
 
-    svg.append("td").append("xhtml:svg")
-      .append("rect")
-      .attr("class", "benchmark")
-      .attr("height", "50px")
-      .attr("width", "100px")
-      .attr("fill", "url(#bg)");
+  const bmWidth = undefined;
+  
+
+  tr.append("td").append("svg")
+    .attr("class", "svgbm")
+    .attr("height", "80px")
+    .attr("width", "100px")
+    .append("rect")
+    .attr("class", "benchmark")
+    .attr("height", "80")
+    .attr("width", "100")
+    .attr("fill", "url(#bg)");
 
   let displayedSugar = undefined;
   tr.append("td")

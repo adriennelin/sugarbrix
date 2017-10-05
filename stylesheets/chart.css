@@ -15,8 +15,10 @@ table {
 
 td {
   vertical-align: middle;
-  width: 100px;
-  height: 100px;
+}
+
+.svgbm {
+  vertical-align: middle;
 }
 
 .name {
