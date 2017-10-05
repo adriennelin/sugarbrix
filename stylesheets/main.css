@@ -1,14 +1,17 @@
-.axis path,
-.axis line {
-  /*fill: none;
-  stroke: #000;
-  shape-rendering: crispEdges;*/
-}
-
 body {
   font-family: 'Roboto', sans-serif;
   color: #282828;
   margin: 20px;
+}
+
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 7px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(255, 212, 169, .7);
+  /*-webkit-box-shadow: 0 0 1px rgba(255, 187, 118, 1);*/
 }
 
 .main-wrapper {

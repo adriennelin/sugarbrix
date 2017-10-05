@@ -1,6 +1,6 @@
 /* global d3, food, benchmark */
 
-const margin = {top: 30, right: 30, bottom: 30, left: 30},
+const margin = {top: 10, right: 10, bottom: 10, left: 10},
   width = 960 - margin.left - margin.right,
   height = 500 - margin.top - margin.bottom;
 
@@ -32,17 +32,56 @@ const table = d3.select(".foreign-obj").append("xhtml:table");
 const thead = table.append("thead");
 const tbody = table.append("tbody");
 
-function updateChart() {
+const categoryFilter = d3.select(".cat-dropdown").property("value");
+const sort = d3.select(".sort-dropdown").property("value");
+const measure = d3.select(".measure-dropdown").property("value");
+const serving = d3.select('input[name="serving"]:checked')
+                        .property("value");
 
-  const categoryFilter = d3.select(".cat-dropdown").property("value");
-  const sort = d3.select(".sort-dropdown").property("value");
-  const measure = d3.select(".measure-dropdown").property("value");
-  const serving = d3.select('input[name="serving"]:checked')
-                          .property("value");
-  console.log(categoryFilter);
-  console.log(sort);
-  console.log(measure);
-  console.log(serving);
+console.log(categoryFilter);
+console.log(sort);
+console.log(measure);
+console.log(serving);
+
+let benchmarkUrl = "https://res.cloudinary.com/adrienne/image/upload/v1507056029/sugarbrix/teaspoon_sugar.jpg";
+const benchmarkName = benchmark.find( b => b.name === measure);
+benchmarkUrl = benchmarkName.img_url;
+
+const benchmarkWidth = benchmarkName.img_width;
+const benchmarkHeight = benchmarkName.img_height;
+
+svg.append("defs")
+  .append("pattern")
+  .attr("id", "bg")
+  .attr("patternUnits", "userSpaceOnUse")
+  .attr("width", benchmarkWidth)
+  .attr("height", benchmarkHeight)
+  .append("image")
+  .attr("xlink:href", benchmarkUrl)
+  .attr("width", benchmarkWidth)
+  .attr("height", benchmarkHeight);
+
+let displayedSugar = undefined;
+function calcDisplayedSugar(foodItem) {
+  switch (serving) {
+    case "oneServing":
+      displayedSugar = foodItem.sugar_per_unit_in_g;
+      break;
+    case "grams":
+      displayedSugar =
+        100 / foodItem.unit_weight_in_g * foodItem.sugar_per_unit_in_g;
+      break;
+  }
+  return displayedSugar;
+}
+
+function calcRectWidth(foodItem) {
+  const sugar = calcDisplayedSugar(foodItem);
+  const bmWidth = sugar/(benchmarkName.sugar_per_unit_in_g);
+  return bmWidth * benchmarkWidth;
+}
+
+function updateChart() {
 
   let filtered = "";
   switch (categoryFilter) {
@@ -52,7 +91,6 @@ function updateChart() {
     default:
       filtered = food.filter(f => f.category === categoryFilter);
   }
-
 
   switch (sort) {
     case "h-weight":
@@ -82,10 +120,6 @@ function updateChart() {
     default:
       filtered.sort( (a,b) => a.category.localeCompare(b.category));
   }
-
-  let benchmarkUrl = "https://res.cloudinary.com/adrienne/image/upload/v1507056029/sugarbrix/teaspoon_sugar.jpg";
-  const measureName = benchmark.find( b => b.name === measure);
-  benchmarkUrl = measureName.img_url;
 
 
   console.log(filtered);
@@ -128,44 +162,21 @@ function updateChart() {
     .attr("width", "45")
     .attr("height", "25");
 
-  svg.append("defs")
-    .append("pattern")
-    .attr("id", "bg")
-    .attr("patternUnits", "userSpaceOnUse")
-    .attr("width", "50")
-    .attr("height", "50")
-    .append("image")
-    .attr("xlink:href", benchmarkUrl)
-    .attr("width", "60")
-    .attr("height", "80");
-
-  const bmWidth = undefined;
-  
-
-  tr.append("td").append("svg")
-    .attr("class", "svgbm")
-    .attr("height", "80px")
-    .attr("width", "100px")
-    .append("rect")
-    .attr("class", "benchmark")
-    .attr("height", "80")
-    .attr("width", "100")
-    .attr("fill", "url(#bg)");
-
-  let displayedSugar = undefined;
   tr.append("td")
     .attr("class", "sugar-grams")
     .html(f => {
-      switch (serving) {
-        case "oneServing":
-          displayedSugar = f.sugar_per_unit_in_g;
-          break;
-        case "grams":
-          displayedSugar = 100 / f.unit_weight_in_g * f.sugar_per_unit_in_g;
-          break;
-      }
-      return displayedSugar + 'g';
+      return calcDisplayedSugar(f) + "g";
     });
+
+  tr.append("td").append("svg")
+    .attr("class", "svgbm")
+    .attr("height", "95px")
+    .attr("width", f => calcRectWidth(f))
+    .append("rect")
+    .attr("class", "benchmark")
+    .attr("height", "95")
+    .attr("width", f => calcRectWidth(f))
+    .attr("fill", "url(#bg)");
 }
 
 updateChart();
@@ -181,3 +192,8 @@ d3.select(".measure-dropdown")
 
 d3.select(".serving-toggle")
   .on("change", () => { updateChart(); });
+
+// Display unit grams of sugar for selected benchmark
+d3.select("body").append("div")
+    .attr("class", "benchmark-note")
+    .html("*1 " + `${benchmarkName}` + "has " + "grams of sugar");
