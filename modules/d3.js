@@ -34,34 +34,26 @@ const tbody = table.append("tbody");
 
 function updateChart() {
 
-  const catFilter = d3.select(".cat-dropdown").property("value");
-  const sortFilter = d3.select(".sort-dropdown").property("value");
-  const measureFilter = d3.select(".measure-dropdown").property("value");
-  const servingFilter = d3.select('input[name="serving"]:checked')
+  const categoryFilter = d3.select(".cat-dropdown").property("value");
+  const sort = d3.select(".sort-dropdown").property("value");
+  const measure = d3.select(".measure-dropdown").property("value");
+  const serving = d3.select('input[name="serving"]:checked')
                           .property("value");
-  console.log(catFilter);
-  console.log(sortFilter);
-  console.log(measureFilter);
-  console.log(servingFilter);
+  console.log(categoryFilter);
+  console.log(sort);
+  console.log(measure);
+  console.log(serving);
 
-  const filtered = food;
-  //
-  // let filtered = "";
-  // switch (attr) {
-  //   case "all":
-  //     filtered = food;
-  //     break;
-  //   case "category":
-  //     filtered = food.filter(f => f.category === filter);
-  //     if (filter === "all") {
-  //       filtered = food;
-  //     }
-  //     break;
-  //   default:
-  //     filtered = food;
-  // }
+  let filtered = "";
+  switch (categoryFilter) {
+    case "all":
+      filtered = food;
+      break;
+    default:
+      filtered = food.filter(f => f.category === categoryFilter);
+  }
 
-  // console.log(filtered);
+  console.log(filtered);
 
   // update.enter().append("img")
   //   .filter(f => { return f.category === filter; } );
@@ -80,6 +72,9 @@ function updateChart() {
     .data(filtered)
     .enter()
     .append("tr");
+
+  tr.exit()
+    .remove();
 
   tr.append("td").html(f => {return f.name; })
     .attr("class", "name");
