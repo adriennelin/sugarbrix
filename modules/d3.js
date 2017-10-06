@@ -9,22 +9,9 @@ const svg = d3.select(".chart-box")
      .attr("class", "svg-container")
      .append("svg")
      .attr("preserveAspectRatio", "xMinYMin meet")
-     .attr("viewBox", "0 0 width height")
+     .attr("viewBox", "0 0 " + width + " " + height)
      .attr("class", "chart-box-svg")
      .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-
-// const xScale = d3.scaleOrdinal()
-//   .range([0, width]);
-//
-// const yScale = d3.scaleOrdinal()
-//   .range([height, 0]);
-//
-// const xAxis = d3.axisBottom(xScale);
-// const yAxis = d3.axisRight(yScale);
-//
-// svg.append("g")
-//   .attr("class", "y axis")
-//   .call(yAxis);
 
 svg.append("foreignObject")
   .attr("width", "100%")
