@@ -4,11 +4,14 @@ const margin = {top: 10, right: 10, bottom: 10, left: 10},
   width = 960 - margin.left - margin.right,
   height = 500 - margin.top - margin.bottom;
 
-const svg = d3.select(".chart-box").append("svg")
-  .attr("class", "chart-box-svg")
-  .attr("width", width + margin.left + margin.right)
-  .attr("height", height + margin.top + margin.bottom).append("g")
-  .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+const svg = d3.select(".chart-box")
+     .append("div")
+     .attr("class", "svg-container")
+     .append("svg")
+     .attr("preserveAspectRatio", "xMinYMin meet")
+     .attr("viewBox", "0 0 width height")
+     .attr("class", "chart-box-svg")
+     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 // const xScale = d3.scaleOrdinal()
 //   .range([0, width]);
@@ -64,12 +67,12 @@ svg.append("defs")
   .append("pattern")
   .attr("id", "bg")
   .attr("patternUnits", "userSpaceOnUse")
-  .attr("width", 20)
-  .attr("height", 20)
+  .attr("width", benchmarkWidth)
+  .attr("height", benchmarkHeight)
   .append("image")
   .attr("xlink:href", benchmarkUrl)
-  .attr("width", 20)
-  .attr("height", 20);
+  .attr("width", benchmarkWidth)
+  .attr("height", benchmarkHeight);
 
 // calculate the sugar displayed based on 1 serving or 100 grams
 let displayedSugar = undefined;
@@ -88,8 +91,9 @@ function calcDisplayedSugar(foodItem) {
 
 function calcRectWidth(foodItem) {
   const sugar = calcDisplayedSugar(foodItem);
-  const bmWidth = sugar/(benchmarkName.sugar_per_unit_in_g);
-  return bmWidth * 20;
+
+  const widthUnits = sugar/(benchmarkName.sugar_per_unit_in_g);
+  return widthUnits * benchmarkWidth; // scale by size of benchmark
 }
 
 function updateChart() {

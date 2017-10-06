@@ -20,15 +20,15 @@ body {
 }
 
 .left-column {
-  width: 75%;
+  width: 100%;
 }
 
-.right-column {
-  width: 25%;
-}
+/*.right-column {
+  width: 0%;
+}*/
 
-.added-natural-infographic {
+/*.added-natural-infographic {
   border: 1px solid #ccc;
   border-radius: 4px;
   height: 200px;
-}
+}*/

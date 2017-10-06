@@ -4,9 +4,9 @@ benchmark=[{
   "description" : "1 teaspoon",
   "sugar_per_unit_in_g" : "4",
   "unit_weight_in_g" : "4",
-  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/c_scale,w_110/v1507056029/sugarbrix/teaspoon_sugar.jpg",
-  "img_width" : "120",
-  "img_height" : "80"
+  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/c_scale,w_100/v1507056029/sugarbrix/teaspoon_sugar.jpg",
+  "img_width" : "100",
+  "img_height" : "95"
 }, {
   "category" : "benchmark",
   "name" : "doughnut",
@@ -23,5 +23,6 @@ benchmark=[{
   "sugar_per_unit_in_g" : "2.6",
   "unit_weight_in_g" : "5.67",
   "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1507056029/sugarbrix/hersheys_kiss.jpg",
-  "img_width" : "95"
+  "img_width" : "95",
+  "img_height" : "95"
 }]
