@@ -11,7 +11,6 @@ body {
 ::-webkit-scrollbar-thumb {
   border-radius: 4px;
   background-color: rgba(255, 212, 169, .7);
-  /*-webkit-box-shadow: 0 0 1px rgba(255, 187, 118, 1);*/
 }
 
 .main-wrapper {

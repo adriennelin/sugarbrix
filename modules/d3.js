@@ -1,7 +1,7 @@
 /* global d3, food, benchmark */
 
 const margin = {top: 10, right: 10, bottom: 10, left: 10},
-  width = 960 - margin.left - margin.right,
+  width = 1300 - margin.left - margin.right,
   height = 500 - margin.top - margin.bottom;
 
 const svg = d3.select(".chart-box")
@@ -12,6 +12,10 @@ const svg = d3.select(".chart-box")
      .attr("viewBox", "0 0 " + width + " " + height)
      .attr("class", "chart-box-svg")
      .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+const divDim = d3.select(".svg-container").node().getBoundingClientRect();
+svg.style.height = divDim.height;
+console.log(divDim.height);
 
 svg.append("foreignObject")
   .attr("width", "100%")
@@ -110,18 +114,20 @@ function updateChart() {
       break;
     case "h-serving":
       filtered.sort( (a,b) => {
-        return b.sugar_per_unit_in_g/a.unit_weight_in_g -
-               a.sugar_per_unit_in_g/b.unit_weight_in_g;
+        const aDisplaySugar = calcDisplayedSugar(a);
+        const bDisplaySugar = calcDisplayedSugar(b);
+        return bDisplaySugar - aDisplaySugar;
         });
       break;
     case "l-serving":
       filtered.sort( (a,b) => {
-        return b.sugar_per_unit_in_g/a.unit_weight_in_g -
-               a.sugar_per_unit_in_g/b.unit_weight_in_g;
+        const aDisplaySugar = calcDisplayedSugar(a);
+        const bDisplaySugar = calcDisplayedSugar(b);
+        return aDisplaySugar - bDisplaySugar;
         });
       break;
     default:
-      filtered.sort( (a,b) => a.category.localeCompare(b.category));
+      filtered.sort( (a,b) => a.name.localeCompare(b.name));
   }
 
   console.log(filtered);
