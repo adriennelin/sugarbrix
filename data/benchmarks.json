@@ -13,16 +13,16 @@ benchmark=[{
   "description" : "1 doughnut",
   "sugar_per_unit_in_g" : "10",
   "unit_weight_in_g" : "49",
-  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1507056030/sugarbrix/donut.png",
-  "img_width" : "80",
-  "img_height" : "95"
+  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/c_scale,w_70/v1507056030/sugarbrix/donut.png",
+  "img_width" : "70",
+  "img_height" : "83"
 }, {
   "category" : "benchmark",
   "name" : "Hershey's Kiss",
   "description" : "1 kiss",
   "sugar_per_unit_in_g" : "2.6",
   "unit_weight_in_g" : "5.67",
-  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1507056029/sugarbrix/hersheys_kiss.jpg",
-  "img_width" : "95",
+  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/c_scale,w_70/v1507056029/sugarbrix/hersheys_kiss.jpg",
+  "img_width" : "70",
   "img_height" : "95"
 }]

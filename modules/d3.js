@@ -31,6 +31,7 @@ let sort = undefined;
 let measure = undefined;
 let serving = undefined;
 
+
 function getUserInput() {
   categoryFilter = d3.select(".cat-dropdown").property("value");
   sort = d3.select(".sort-dropdown").property("value");
@@ -45,6 +46,21 @@ function getUserInput() {
 }
 getUserInput();
 
+// add repeating benchmark image as a pattern
+const [benchmarkWidth, benchmarkHeight] = calcBenchmarkDim();
+
+svg.append("defs")
+  .append("pattern")
+  .attr("id", "bg")
+  .attr("patternUnits", "userSpaceOnUse")
+  .attr("width", getBenchmark().img_width)
+  .attr("height", getBenchmark().img_height)
+  .append("image")
+  .attr("id", "bm-img")
+  .attr("xlink:href", getBenchmark().img_url)
+  .attr("width", getBenchmark().img_width)
+  .attr("height", getBenchmark().img_height);
+
 function servingText(foodItem) {
   return serving === "oneServing" ? foodItem.description : "100 g";
 }
@@ -52,12 +68,6 @@ function servingText(foodItem) {
 // get bench image depending on user input
 function getBenchmark() {
   return benchmark.find( b => { return b.name === measure; } );
-}
-
-function calcBenchmarkDim() {
-  const benchmarkName = getBenchmark();
-  const benchmarkDim = [benchmarkName.img_width, benchmarkName.img_height];
-  return benchmarkDim;
 }
 
 // calculate the sugar displayed based on 1 serving or 100 grams
@@ -81,13 +91,24 @@ function calcSugarPercent(foodItem) {
     foodItem.sugar_per_unit_in_g/foodItem.unit_weight_in_g * 100);
 }
 
+function calcBenchmarkDim() {
+  const benchmarkName = getBenchmark();
+  const benchmarkDim = [benchmarkName.img_width, benchmarkName.img_height];
+  return benchmarkDim;
+}
+
 function calcRectWidth(foodItem) {
   const sugar = calcDisplayedSugar(foodItem);
   const benchmarkName = getBenchmark();
   const [benchmarkWidth, benchmarkHeight] = calcBenchmarkDim();
-
-  const widthUnits = sugar/(benchmark.sugar_per_unit_in_g);
+  const widthUnits = sugar/(benchmarkName.sugar_per_unit_in_g);
+  console.log(widthUnits);
+  console.log(benchmarkWidth);
   return widthUnits * benchmarkWidth; // scale by size of benchmark
+}
+
+function updatePattern() {
+  d3.select("#bm-img").attr("xlink:href", getBenchmark().img_url);
 }
 
 function updateChart() {
@@ -101,21 +122,6 @@ function updateChart() {
     default:
       filtered = food.filter(f => f.category === categoryFilter);
   }
-
-  // add repeating benchmark image as a pattern
-  const [benchmarkWidth, benchmarkHeight] = calcBenchmarkDim();
-  console.log(getBenchmark());
-  console.log(benchmarkWidth)
-  svg.append("defs")
-    .append("pattern")
-    .attr("id", "bg")
-    .attr("patternUnits", "userSpaceOnUse")
-    .attr("width", benchmarkWidth)
-    .attr("height", benchmarkHeight)
-    .append("image")
-    .attr("xlink:href", getBenchmark().img_url)
-    .attr("width", benchmarkWidth)
-    .attr("height", benchmarkHeight);
 
   switch (sort) {
     case "h-weight":
@@ -147,8 +153,6 @@ function updateChart() {
     default:
       filtered.sort( (a,b) => a.name.localeCompare(b.name));
   }
-
-  console.log(filtered);
 
   const rows = tbody.selectAll("tr")
     .data(filtered);
@@ -206,11 +210,8 @@ function updateChart() {
   cells.text(d => { return d.value; });
   cells.exit().remove();
 
-  // Display unit grams of sugar for selected benchmark
-  d3.selectAll("benchmark-note")
-    .text(getBenchmarkNote());
-
-  d3.selectAll("benchmark-note").exit().remove();
+  updatePattern();
+  document.getElementById("note").innerHTML = getBenchmarkNote();
 }
 
 d3.select(".cat-dropdown")
@@ -231,18 +232,14 @@ function getBenchmarkNote(){
          + `${benchmarkName.sugar_per_unit_in_g}` + " grams of sugar");
 }
 
-
+// Display note about grams of sugar for selected benchmark
 d3.select("body")
     .append("div")
-    .selectAll("text")
-    .data(benchmark)
-    .enter()
-    .append("text")
-    .attr("class", "benchmark-note")
-    .text(getBenchmarkNote());
+    .text("")
+    .attr("id","note");
 
 // d3.event = document.createEvent('clickEvent');
 // d3.event.initMouseEvent("mousemove");
-d3.select("radio#100g").dispatch("click");
+// d3.select("radio#100g").dispatch("click");
 
 updateChart();
