@@ -150,17 +150,6 @@ function updateChart() {
 
   console.log(filtered);
 
-
-  // update.transition()
-  //   .duration(3);
-  //
-  // update.exit().remove();
-  // if (attr === "benchmark") {
-  //   const unit = benchmark.filter( b => b.category === filter );
-  //   benchmarkUrl = unit.img_url;
-  // }
-
-
   const rows = tbody.selectAll("tr")
     .data(filtered);
 
@@ -220,6 +209,8 @@ function updateChart() {
   // Display unit grams of sugar for selected benchmark
   d3.selectAll("benchmark-note")
     .text(getBenchmarkNote());
+
+  d3.selectAll("benchmark-note").exit().remove();
 }
 
 d3.select(".cat-dropdown")
@@ -240,6 +231,18 @@ function getBenchmarkNote(){
          + `${benchmarkName.sugar_per_unit_in_g}` + " grams of sugar");
 }
 
-d3.select("body").append("div")
+
+d3.select("body")
+    .append("div")
+    .selectAll("text")
+    .data(benchmark)
+    .enter()
+    .append("text")
     .attr("class", "benchmark-note")
     .text(getBenchmarkNote());
+
+// d3.event = document.createEvent('clickEvent');
+// d3.event.initMouseEvent("mousemove");
+d3.select("radio#100g").dispatch("click");
+
+updateChart();

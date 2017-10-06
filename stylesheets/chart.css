@@ -15,18 +15,20 @@ resize-svg-when-window-is-resized-in-d3-js */
   display: inline-block;
   position: relative;
   width: 100%;
+  height: 2000px;
   padding-bottom: 100%;
   vertical-align: top;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .chart-box-svg {
   display: inline-block;
   position: relative;
   width: 100%;
+  /*height: 2000px;*/
   padding-bottom: 100%;
   vertical-align: top;
-  overflow: hidden;
+  overflow: visible;
 }
 
 /* end responsive formatting */

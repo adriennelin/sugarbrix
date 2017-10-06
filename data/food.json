@@ -263,7 +263,7 @@ food=[{
   "description" : "medium",
   "sugar_per_unit_in_g" : "5",
   "unit_weight_in_g" : "170",
-  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1507007462/sugarbrix/CFA_Spicy-Chick-Fil-A-Sandwich.png"
+  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1507007462/sugarbrix/CFA_WaffleFry.png"
 }, {
   "category" : "fast food",
   "name" : "Pepperoni Pizza - Dominos",
@@ -333,7 +333,7 @@ food=[{
   "description" : "1 hot dog",
   "sugar_per_unit_in_g" : "12",
   "unit_weight_in_g" : "257",
-  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1507007463/sugarbrix/taco_bell_crunch_wrap_supreme.png"
+  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1507007463/sugarbrix/wienerschnitzel_chicago_dog.jpg"
 }, {
   "category" : "dessert",
   "name" : "Strawberry Milkshake - In-N-Out",
