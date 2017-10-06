@@ -36,6 +36,10 @@ table {
   font-weight: bold;
 }
 
+tr {
+  vertical-align: middle;
+}
+
 td {
   vertical-align: middle;
 }
@@ -45,7 +49,7 @@ td {
 }
 
 .name {
-  width: 100px;
+  width: 120px;
   vertical-align: middle;
 }
 
@@ -64,11 +68,21 @@ td {
 
 }
 
+.td-equal {
+  height: 75px;
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
 .sugar-grams {
   font-size: 28px;
   text-align: left;
   padding-bottom: 6px;
-  padding-left: 6px;
+  padding-left: 10px;
 }
 
 .benchmark-note {

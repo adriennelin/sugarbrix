@@ -1,245 +1,245 @@
 food=[{
   "category" : "fruit",
-  "name" : "apple",
+  "name" : "Apple",
   "description" : "1 medium (3\" dia)",
   "sugar_per_unit_in_g" : "19",
   "unit_weight_in_g" : "182",
   "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506989590/sugarbrix/apple_PNG12489.png"
 }, {
   "category" : "fruit",
-  "name" : "avocado",
+  "name" : "Avocado",
   "description" : "1 medium",
   "sugar_per_unit_in_g" : "1.3",
   "unit_weight_in_g" : "201",
   "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506989590/sugarbrix/avocado_PNG15489.png"
 }, {
   "category" : "fruit",
-  "name" : "banana",
+  "name" : "Banana",
   "description" : "1 medium (7\" long)",
   "sugar_per_unit_in_g" : "14",
   "unit_weight_in_g" : "118",
   "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506989590/sugarbrix/banana_PNG842.png"
 }, {
   "category" : "fruit",
-  "name" : "blueberries",
+  "name" : "Blueberries",
   "description" : "1 cup",
   "sugar_per_unit_in_g" : "15",
   "unit_weight_in_g" : "148",
   "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506989591/sugarbrix/blueberries_PNG71.png"
 }, {
   "category" : "fruit",
-  "name" : "cherries",
+  "name" : "Cherries",
   "description" : "1 cup",
   "sugar_per_unit_in_g" : "9",
   "unit_weight_in_g" : "103",
   "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506989592/sugarbrix/cherry_PNG629.png"
 }, {
   "category" : "fruit",
-  "name" : "figs",
+  "name" : "Figs",
   "description" : "1 cup",
   "sugar_per_unit_in_g" : "73",
   "unit_weight_in_g" : "261",
   "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506989592/sugarbrix/Fig2.jpg"
 }, {
   "category" : "fruit",
-  "name" : "grapes",
+  "name" : "Grapes",
   "description" : "1 cup",
   "sugar_per_unit_in_g" : "15",
   "unit_weight_in_g" : "92",
   "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506989922/sugarbrix/grape_PNG517.png"
 }, {
   "category" : "fruit",
-  "name" : "grapefruit",
+  "name" : "Grapefruit",
   "description" : "0.5 fruit (3.5\" dia)",
   "sugar_per_unit_in_g" : "8",
   "unit_weight_in_g" : "123",
   "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506989591/sugarbrix/grapefruit_PNG15271.png"
 }, {
   "category" : "fruit",
-  "name" : "lemon",
+  "name" : "Lemon",
   "description" : "1 fruit (2\" dia)",
   "sugar_per_unit_in_g" : "1.5",
   "unit_weight_in_g" : "58",
   "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506989592/sugarbrix/lemon_PNG25275.png"
 }, {
   "category" : "fruit",
-  "name" : "lychee",
+  "name" : "Lychee",
   "description" : "1 cup",
   "sugar_per_unit_in_g" : "29",
   "unit_weight_in_g" : "190",
   "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506989999/sugarbrix/lychee.jpg"
 }, {
   "category" : "fruit",
-  "name" : "mango",
-  "description" : "1 fruit without refuse",
+  "name" : "Mango",
+  "description" : "1 fruit",
   "sugar_per_unit_in_g" : "46",
   "unit_weight_in_g" : "336",
   "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506989589/sugarbrix/mango_PNG9171.png"
 }, {
   "category" : "fruit",
-  "name" : "orange",
+  "name" : "Orange",
   "description" : "1 medium (2.5\" dia)",
   "sugar_per_unit_in_g" : "12",
   "unit_weight_in_g" : "131",
   "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506989589/sugarbrix/orange_PNG804.png"
 }, {
   "category" : "fruit",
-  "name" : "peach",
+  "name" : "Peach",
   "description" : "1 medium (2.5\" dia)",
   "sugar_per_unit_in_g" : "13",
   "unit_weight_in_g" : "150",
   "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506989590/sugarbrix/peach_PNG4869.png"
 }, {
   "category" : "fruit",
-  "name" : "pineapple",
+  "name" : "Pineapple",
   "description" : "1 cup, chunks",
   "sugar_per_unit_in_g" : "16",
   "unit_weight_in_g" : "165",
   "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506989590/sugarbrix/pineapple_PNG2759.png"
 }, {
   "category" : "fruit",
-  "name" : "pomegranate",
+  "name" : "Pomegranate",
   "description" : "0.5 cup seeds",
   "sugar_per_unit_in_g" : "12",
   "unit_weight_in_g" : "87",
   "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506989590/sugarbrix/pomegranate_PNG8647.png"
 }, {
   "category" : "fruit",
-  "name" : "raspberries",
+  "name" : "Raspberries",
   "description" : "1 cup",
   "sugar_per_unit_in_g" : "5",
   "unit_weight_in_g" : "123",
   "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506989591/sugarbrix/raspberry_PNG5050.png"
 }, {
   "category" : "fruit",
-  "name" : "strawberries",
+  "name" : "Strawberries",
   "description" : "1 cup, whole",
   "sugar_per_unit_in_g" : "7",
   "unit_weight_in_g" : "144",
   "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506989922/sugarbrix/strawberry_PNG2598.png"
 }, {
   "category" : "drinks",
-  "name" : "beer",
-  "description" : "12 oz bottle",
+  "name" : "Beer",
+  "description" : "12oz bottle",
   "sugar_per_unit_in_g" : "0",
   "unit_weight_in_g" : "355",
   "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506990485/sugarbrix/anchor_steam_bottle.jpg"
 }, {
   "category" : "drinks",
   "name" : "Arizona Lemon Iced Tea",
-  "description" : "24 oz can",
+  "description" : "24oz can",
   "sugar_per_unit_in_g" : "66",
   "unit_weight_in_g" : "710",
   "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506990485/sugarbrix/arizona-iced-tea-lemon-can.jpg"
 }, {
   "category" : "drinks",
-  "name" : "tea",
-  "description" : "8 oz cup",
+  "name" : "Tea",
+  "description" : "8oz cup",
   "sugar_per_unit_in_g" : "0",
   "unit_weight_in_g" : "237",
   "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506997199/sugarbrix/black_tea.jpg"
 }, {
   "category" : "drinks",
-  "name" : "bubble tea - original milk tea",
-  "description" : "16 oz",
+  "name" : "Bubble Tea - Original Milk Tea",
+  "description" : "16oz",
   "sugar_per_unit_in_g" : "36",
   "unit_weight_in_g" : "473",
   "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506990486/sugarbrix/bubble_tea.png"
 }, {
   "category" : "drinks",
   "name" : "coffee",
-  "description" : "8 oz cup",
+  "description" : "8oz cup",
   "sugar_per_unit_in_g" : "0",
   "unit_weight_in_g" : "237",
   "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506990486/sugarbrix/coffee_cup.jpg"
 }, {
   "category" : "drinks",
   "name" : "Coke",
-  "description" : "12 oz can",
+  "description" : "12oz can",
   "sugar_per_unit_in_g" : "39",
   "unit_weight_in_g" : "355",
   "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506990486/sugarbrix/Coke_12oz.png"
 }, {
   "category" : "drinks",
   "name" : "Diet Coke",
-  "description" : "12 oz can",
+  "description" : "12oz can",
   "sugar_per_unit_in_g" : "0",
   "unit_weight_in_g" : "355",
   "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506990486/sugarbrix/DietCoke_12oz.png"
 }, {
   "category" : "drinks",
   "name" : "Starbucks Green Tea Creme Frappuccino",
-  "description" : "Grande 16 oz",
+  "description" : "Grande 16oz",
   "sugar_per_unit_in_g" : "65",
   "unit_weight_in_g" : "473",
   "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506990487/sugarbrix/greenteafrapp.jpg"
 }, {
   "category" : "drinks",
   "name" : "McDonald's McCafé Mocha",
-  "description" : "Medium 16 oz",
+  "description" : "Medium 16oz",
   "sugar_per_unit_in_g" : "41",
   "unit_weight_in_g" : "355",
   "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506990486/sugarbrix/mcdonald_mccafe_mocha.png"
 }, {
   "category" : "drinks",
   "name" : "Mountain Dew",
-  "description" : "12 oz can",
+  "description" : "12oz can",
   "sugar_per_unit_in_g" : "46",
   "unit_weight_in_g" : "355",
   "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506990486/sugarbrix/mountain_dew_12oz.jpg"
 }, {
   "category" : "drinks",
-  "name" : "orange juice",
-  "description" : "8 oz cup",
+  "name" : "Orange Juice",
+  "description" : "8oz cup",
   "sugar_per_unit_in_g" : "21",
   "unit_weight_in_g" : "248",
   "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506990487/sugarbrix/orange_Juice.jpg"
 }, {
   "category" : "drinks",
   "name" : "Pepsi",
-  "description" : "12 oz can",
+  "description" : "12oz can",
   "sugar_per_unit_in_g" : "41",
   "unit_weight_in_g" : "355",
   "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506990487/sugarbrix/pepsi_12oz.png"
 }, {
   "category" : "drinks",
   "name" : "Starbucks Pumpkin Spice Latte",
-  "description" : "Grande 16 oz",
+  "description" : "Grande 16oz",
   "sugar_per_unit_in_g" : "50",
   "unit_weight_in_g" : "473",
   "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506990487/sugarbrix/PSL.jpg"
 }, {
   "category" : "drinks",
-  "name" : "red wine",
-  "description" : "5 oz glass",
+  "name" : "Red Wine",
+  "description" : "5oz glass",
   "sugar_per_unit_in_g" : ".9",
   "unit_weight_in_g" : "147",
   "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506990487/sugarbrix/red_wine_glass.jpg"
 }, {
   "category" : "drinks",
-  "name" : "white wine",
-  "description" : "5 oz glass",
+  "name" : "White Wine",
+  "description" : "5oz glass",
   "sugar_per_unit_in_g" : "1.4",
   "unit_weight_in_g" : "147",
   "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506990487/sugarbrix/white_wine_glass.jpg"
 }, {
   "category" : "drinks",
   "name" : "Red Bull",
-  "description" : "12 oz can",
+  "description" : "12oz can",
   "sugar_per_unit_in_g" : "37",
   "unit_weight_in_g" : "355",
   "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506990487/sugarbrix/redbull_12oz.jpg"
 }, {
   "category" : "drinks",
   "name" : "Rock Star",
-  "description" : "16 oz can",
+  "description" : "16oz can",
   "sugar_per_unit_in_g" : "62",
   "unit_weight_in_g" : "473",
   "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506990487/sugarbrix/rockstar_16oz.jpg"
 }, {
   "category" : "drinks",
   "name" : "Sprite",
-  "description" : "12 oz can",
+  "description" : "12oz can",
   "sugar_per_unit_in_g" : "33",
   "unit_weight_in_g" : "356",
   "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1506990487/sugarbrix/sprite_can_12oz.jpg"
@@ -260,14 +260,14 @@ food=[{
 }, {
   "category" : "fast food",
   "name" : "Waffle Fries - Chick-fil-A",
-  "description" : "medium size",
+  "description" : "medium",
   "sugar_per_unit_in_g" : "5",
   "unit_weight_in_g" : "170",
   "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1507007462/sugarbrix/CFA_Spicy-Chick-Fil-A-Sandwich.png"
 }, {
   "category" : "fast food",
   "name" : "Pepperoni Pizza - Dominos",
-  "description" : "1 slice - 14\" large pizza",
+  "description" : "1 slice, 14\" large pizza",
   "sugar_per_unit_in_g" : "3",
   "unit_weight_in_g" : "124",
   "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1507007462/sugarbrix/dominos_pizza_slice.png"
@@ -295,14 +295,14 @@ food=[{
 }, {
   "category" : "fast food",
   "name" : "Fries - McDonald's",
-  "description" : "medium size",
+  "description" : "medium",
   "sugar_per_unit_in_g" : ".2",
   "unit_weight_in_g" : "117",
   "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1507007462/sugarbrix/mcdonalds_fries.png"
 }, {
   "category" : "fast food",
   "name" : "Fried Chicken - Popeyes",
-  "description" : "1 thigh and 1 leg",
+  "description" : "1 thigh, 1 leg",
   "sugar_per_unit_in_g" : "0",
   "unit_weight_in_g" : "200",
   "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1507007463/sugarbrix/popeyes-chicken.jpg"
@@ -323,7 +323,7 @@ food=[{
 }, {
   "category" : "fast food",
   "name" : "Spicy Chicken Sandwich - Wendy's",
-  "description" : "1 crunchwrap",
+  "description" : "1 sandwich",
   "sugar_per_unit_in_g" : "6",
   "unit_weight_in_g" : "244",
   "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1507007463/sugarbrix/wendys_spicy_chicken_sandwich.png"
@@ -361,14 +361,14 @@ food=[{
   "description" : "1 pie",
   "sugar_per_unit_in_g" : "13",
   "unit_weight_in_g" : "77",
-  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1507009349/sugarbrix/INO_milkshake.jpg"
+  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1507012169/sugarbrix/baked-apple-pie.png"
 }, {
   "category" : "dessert",
   "name" : "Fried Apple Pie - McDonald's",
   "description" : "1 pie",
   "sugar_per_unit_in_g" : "7",
   "unit_weight_in_g" : "77",
-  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1507009349/sugarbrix/INO_milkshake.jpg"
+  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1507012170/sugarbrix/mcd-fried-apple-pie.png"
 }, {
   "category" : "dessert",
   "name" : "Royal OREO Blizzard Filled with Fudge - Dairy Queen",
@@ -403,19 +403,19 @@ food=[{
   "description" : "1 large bakery cupcake",
   "sugar_per_unit_in_g" : "50",
   "unit_weight_in_g" : "113",
-  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1507009349/sugarbrix/INO_milkshake.jpg"
+  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1507012170/sugarbrix/vanilla_cupcake.png"
 }, {
   "category" : "dessert",
   "name" : "Chocolate Chip Cookie",
   "description" : "1 large cookie",
   "sugar_per_unit_in_g" : "26",
   "unit_weight_in_g" : "58",
-  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1507009349/sugarbrix/INO_milkshake.jpg"
+  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1507012169/sugarbrix/Chocolate_Chip_Cookie.png"
 }, {
   "category" : "dessert",
   "name" : "Half-baked - Ben & Jerry's",
   "description" : "1/2 cup",
   "sugar_per_unit_in_g" : "27",
   "unit_weight_in_g" : "105",
-  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1507009349/sugarbrix/INO_milkshake.jpg"
+  "img_url" : "https://res.cloudinary.com/adrienne/image/upload/v1507012170/sugarbrix/half-baked.png"
 }]

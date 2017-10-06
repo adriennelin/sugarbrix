@@ -45,45 +45,48 @@ function getUserInput() {
 }
 getUserInput();
 
+function servingText(foodItem) {
+  return serving === "oneServing" ? foodItem.description : "100 g";
+}
+
 // get bench image depending on user input
-let benchmarkUrl = "https://res.cloudinary.com/adrienne/image/upload/v1507056029/sugarbrix/teaspoon_sugar.jpg";
-const benchmarkName = benchmark.find( b => b.name === measure);
-benchmarkUrl = benchmarkName.img_url;
+function getBenchmark() {
+  return benchmark.find( b => { return b.name === measure; } );
+}
 
-const benchmarkWidth = benchmarkName.img_width;
-const benchmarkHeight = benchmarkName.img_height;
-
-// add repeating benchmark image as a pattern
-svg.append("defs")
-  .append("pattern")
-  .attr("id", "bg")
-  .attr("patternUnits", "userSpaceOnUse")
-  .attr("width", benchmarkWidth)
-  .attr("height", benchmarkHeight)
-  .append("image")
-  .attr("xlink:href", benchmarkUrl)
-  .attr("width", benchmarkWidth)
-  .attr("height", benchmarkHeight);
+function calcBenchmarkDim() {
+  const benchmarkName = getBenchmark();
+  const benchmarkDim = [benchmarkName.img_width, benchmarkName.img_height];
+  return benchmarkDim;
+}
 
 // calculate the sugar displayed based on 1 serving or 100 grams
 let displayedSugar = undefined;
 function calcDisplayedSugar(foodItem) {
   switch (serving) {
     case "oneServing":
-      displayedSugar = foodItem.sugar_per_unit_in_g;
+      displayedSugar = Math.round(foodItem.sugar_per_unit_in_g);
       break;
     case "grams":
       displayedSugar =
-        100 / foodItem.unit_weight_in_g * foodItem.sugar_per_unit_in_g;
+        Math.round(100 / foodItem.unit_weight_in_g
+             * foodItem.sugar_per_unit_in_g);
       break;
   }
   return displayedSugar;
 }
 
+function calcSugarPercent(foodItem) {
+  return Math.round(
+    foodItem.sugar_per_unit_in_g/foodItem.unit_weight_in_g * 100);
+}
+
 function calcRectWidth(foodItem) {
   const sugar = calcDisplayedSugar(foodItem);
+  const benchmarkName = getBenchmark();
+  const [benchmarkWidth, benchmarkHeight] = calcBenchmarkDim();
 
-  const widthUnits = sugar/(benchmarkName.sugar_per_unit_in_g);
+  const widthUnits = sugar/(benchmark.sugar_per_unit_in_g);
   return widthUnits * benchmarkWidth; // scale by size of benchmark
 }
 
@@ -99,11 +102,26 @@ function updateChart() {
       filtered = food.filter(f => f.category === categoryFilter);
   }
 
+  // add repeating benchmark image as a pattern
+  const [benchmarkWidth, benchmarkHeight] = calcBenchmarkDim();
+  console.log(getBenchmark());
+  console.log(benchmarkWidth)
+  svg.append("defs")
+    .append("pattern")
+    .attr("id", "bg")
+    .attr("patternUnits", "userSpaceOnUse")
+    .attr("width", benchmarkWidth)
+    .attr("height", benchmarkHeight)
+    .append("image")
+    .attr("xlink:href", getBenchmark().img_url)
+    .attr("width", benchmarkWidth)
+    .attr("height", benchmarkHeight);
+
   switch (sort) {
     case "h-weight":
       filtered.sort( (a,b) => {
-        return b.sugar_per_unit_in_g/a.unit_weight_in_g -
-               a.sugar_per_unit_in_g/b.unit_weight_in_g;
+        return b.sugar_per_unit_in_g/b.unit_weight_in_g -
+               a.sugar_per_unit_in_g/a.unit_weight_in_g;
         });
       break;
     case "l-weight":
@@ -132,8 +150,6 @@ function updateChart() {
 
   console.log(filtered);
 
-  // update.enter().append("img")
-  //   .filter(f => { return f.category === filter; } );
 
   // update.transition()
   //   .duration(3);
@@ -145,38 +161,48 @@ function updateChart() {
   // }
 
 
-  const tr = tbody.selectAll("tr")
-    .data(filtered)
-    .enter()
+  const rows = tbody.selectAll("tr")
+    .data(filtered);
+
+  rows.exit().remove();
+
+  rows.enter()
     .append("tr");
 
-  tr.exit()
-    .remove();
+  const td = rows.selectAll("td")
+    .data(filtered, f => { return f; })
+    .text(filtered, f => { return f.name; });
 
-  tr.append("td").html(f => {return f.name; })
-    .attr("class", "name");
+  const cells = rows.selectAll("td")
+    .data(f => { return f; });
 
-  tr.append("td")
+  rows.append("td").html(f => {return f.name; })
+        .attr("class", "name");
+
+  rows.append("td")
     .append("img")
     .attr("class", "food-img")
     .attr('src', f => {return f.img_url; })
     .attr("width", "65")
     .attr("height", "55");
 
-  tr.append("td")
+  rows.append("td")
+    .attr("class", "td-equal")
+    .html(f => { return servingText(f); })
     .append("img")
     .attr("class", "equal")
     .attr("src", "https://res.cloudinary.com/adrienne/image/upload/v1507140911/sugarbrix/equal_sign.png")
-    .attr("width", "45")
+    .attr("width", "80")
     .attr("height", "25");
 
-  tr.append("td")
+  rows.append("td")
     .attr("class", "sugar-grams")
     .html(f => {
-      return calcDisplayedSugar(f) + "g";
+      return calcDisplayedSugar(f) + "g (" +
+        calcSugarPercent(f) + "%)";
     });
 
-  tr.append("td").append("svg")
+  rows.append("td").append("svg")
     .attr("class", "svgbm")
     .attr("height", "95px")
     .attr("width", f => calcRectWidth(f))
@@ -185,9 +211,16 @@ function updateChart() {
     .attr("height", "95")
     .attr("width", f => calcRectWidth(f))
     .attr("fill", "url(#bg)");
-}
 
-updateChart();
+  cells.enter().append("td");
+
+  cells.text(d => { return d.value; });
+  cells.exit().remove();
+
+  // Display unit grams of sugar for selected benchmark
+  d3.selectAll("benchmark-note")
+    .text(getBenchmarkNote());
+}
 
 d3.select(".cat-dropdown")
   .on("change", () => { updateChart(); });
@@ -201,7 +234,12 @@ d3.select(".measure-dropdown")
 d3.select(".serving-toggle")
   .on("change", () => { updateChart(); });
 
-// Display unit grams of sugar for selected benchmark
+function getBenchmarkNote(){
+  const benchmarkName = getBenchmark();
+  return ("*1 " + `${benchmarkName.name}` + " contains "
+         + `${benchmarkName.sugar_per_unit_in_g}` + " grams of sugar");
+}
+
 d3.select("body").append("div")
     .attr("class", "benchmark-note")
-    .html("*1 " + `${benchmarkName}` + "has " + "grams of sugar");
+    .text(getBenchmarkNote());

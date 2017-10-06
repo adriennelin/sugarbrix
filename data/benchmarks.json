@@ -9,7 +9,7 @@ benchmark=[{
   "img_height" : "95"
 }, {
   "category" : "benchmark",
-  "name" : "doughnut",
+  "name" : "Krispy Kreme Doughnut",
   "description" : "1 doughnut",
   "sugar_per_unit_in_g" : "10",
   "unit_weight_in_g" : "49",
@@ -18,7 +18,7 @@ benchmark=[{
   "img_height" : "95"
 }, {
   "category" : "benchmark",
-  "name" : "kiss",
+  "name" : "Hershey's Kiss",
   "description" : "1 kiss",
   "sugar_per_unit_in_g" : "2.6",
   "unit_weight_in_g" : "5.67",
