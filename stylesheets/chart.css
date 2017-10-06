@@ -35,6 +35,12 @@ td {
   margin: 10px 6px 10px 0px;
 }
 
+#bg {
+  /*width: 60px;
+  height: 40px;
+  object-fit: cover;*/
+}
+
 .benchmark {
 
 }

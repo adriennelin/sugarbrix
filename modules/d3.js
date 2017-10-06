@@ -32,17 +32,26 @@ const table = d3.select(".foreign-obj").append("xhtml:table");
 const thead = table.append("thead");
 const tbody = table.append("tbody");
 
-const categoryFilter = d3.select(".cat-dropdown").property("value");
-const sort = d3.select(".sort-dropdown").property("value");
-const measure = d3.select(".measure-dropdown").property("value");
-const serving = d3.select('input[name="serving"]:checked')
-                        .property("value");
+let categoryFilter = undefined;
+let sort = undefined;
+let measure = undefined;
+let serving = undefined;
 
-console.log(categoryFilter);
-console.log(sort);
-console.log(measure);
-console.log(serving);
+function getUserInput() {
+  categoryFilter = d3.select(".cat-dropdown").property("value");
+  sort = d3.select(".sort-dropdown").property("value");
+  measure = d3.select(".measure-dropdown").property("value");
+  serving = d3.select('input[name="serving"]:checked')
+                          .property("value");
 
+  console.log(categoryFilter);
+  console.log(sort);
+  console.log(measure);
+  console.log(serving);
+}
+getUserInput();
+
+// get bench image depending on user input
 let benchmarkUrl = "https://res.cloudinary.com/adrienne/image/upload/v1507056029/sugarbrix/teaspoon_sugar.jpg";
 const benchmarkName = benchmark.find( b => b.name === measure);
 benchmarkUrl = benchmarkName.img_url;
@@ -50,17 +59,19 @@ benchmarkUrl = benchmarkName.img_url;
 const benchmarkWidth = benchmarkName.img_width;
 const benchmarkHeight = benchmarkName.img_height;
 
+// add repeating benchmark image as a pattern
 svg.append("defs")
   .append("pattern")
   .attr("id", "bg")
   .attr("patternUnits", "userSpaceOnUse")
-  .attr("width", benchmarkWidth)
-  .attr("height", benchmarkHeight)
+  .attr("width", 20)
+  .attr("height", 20)
   .append("image")
   .attr("xlink:href", benchmarkUrl)
-  .attr("width", benchmarkWidth)
-  .attr("height", benchmarkHeight);
+  .attr("width", 20)
+  .attr("height", 20);
 
+// calculate the sugar displayed based on 1 serving or 100 grams
 let displayedSugar = undefined;
 function calcDisplayedSugar(foodItem) {
   switch (serving) {
@@ -78,10 +89,11 @@ function calcDisplayedSugar(foodItem) {
 function calcRectWidth(foodItem) {
   const sugar = calcDisplayedSugar(foodItem);
   const bmWidth = sugar/(benchmarkName.sugar_per_unit_in_g);
-  return bmWidth * benchmarkWidth;
+  return bmWidth * 20;
 }
 
 function updateChart() {
+  getUserInput();
 
   let filtered = "";
   switch (categoryFilter) {
@@ -104,23 +116,22 @@ function updateChart() {
         return a.sugar_per_unit_in_g/a.unit_weight_in_g -
                b.sugar_per_unit_in_g/b.unit_weight_in_g;
         });
-    //   break;
-    // case "h-serving":
-    //   filtered.sort( (a,b) => {
-    //     return b.sugar_per_unit_in_g/a.unit_weight_in_g -
-    //            a.sugar_per_unit_in_g/b.unit_weight_in_g;
-    //     });
-    //   break;
-    // case "l-serving":
-    //   filtered.sort( (a,b) => {
-    //     return b.sugar_per_unit_in_g/a.unit_weight_in_g -
-    //            a.sugar_per_unit_in_g/b.unit_weight_in_g;
-    //     });
-    //   break;
+      break;
+    case "h-serving":
+      filtered.sort( (a,b) => {
+        return b.sugar_per_unit_in_g/a.unit_weight_in_g -
+               a.sugar_per_unit_in_g/b.unit_weight_in_g;
+        });
+      break;
+    case "l-serving":
+      filtered.sort( (a,b) => {
+        return b.sugar_per_unit_in_g/a.unit_weight_in_g -
+               a.sugar_per_unit_in_g/b.unit_weight_in_g;
+        });
+      break;
     default:
       filtered.sort( (a,b) => a.category.localeCompare(b.category));
   }
-
 
   console.log(filtered);
 
@@ -138,7 +149,7 @@ function updateChart() {
 
 
   const tr = tbody.selectAll("tr")
-    .data(food)
+    .data(filtered)
     .enter()
     .append("tr");
 
