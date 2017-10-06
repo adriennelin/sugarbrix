@@ -41,7 +41,7 @@ The unit of measurement selector allows users to compare against teaspoons, doug
 
 A responsive SVG scales all elements within the display chart while maintaining the same proportions.
 
-![responsive gif](https://res.cloudinary.com/adrienne/image/upload/c_scale,q_72,w_516/v1507312044/sugarbrix/responsive_svg.gif)
+![responsive gif](https://res.cloudinary.com/adrienne/image/upload/q_70/v1507312044/sugarbrix/responsive_svg.gif)
 
 ---
 ## Future Development
