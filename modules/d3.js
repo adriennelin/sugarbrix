@@ -15,7 +15,6 @@ const svg = d3.select(".chart-box")
 
 const divDim = d3.select(".svg-container").node().getBoundingClientRect();
 svg.style.height = divDim.height;
-console.log(divDim.height);
 
 svg.append("foreignObject")
   .attr("width", "100%")
@@ -31,18 +30,12 @@ let sort = undefined;
 let measure = undefined;
 let serving = undefined;
 
-
 function getUserInput() {
   categoryFilter = d3.select(".cat-dropdown").property("value");
   sort = d3.select(".sort-dropdown").property("value");
   measure = d3.select(".measure-dropdown").property("value");
   serving = d3.select('input[name="serving"]:checked')
                           .property("value");
-
-  console.log(categoryFilter);
-  console.log(sort);
-  console.log(measure);
-  console.log(serving);
 }
 getUserInput();
 
@@ -102,8 +95,6 @@ function calcRectWidth(foodItem) {
   const benchmarkName = getBenchmark();
   const [benchmarkWidth, benchmarkHeight] = calcBenchmarkDim();
   const widthUnits = sugar/(benchmarkName.sugar_per_unit_in_g);
-  console.log(widthUnits);
-  console.log(benchmarkWidth);
   return widthUnits * benchmarkWidth; // scale by size of benchmark
 }
 
@@ -197,7 +188,7 @@ function updateChart() {
 
   rows.append("td").append("svg")
     .attr("class", "svgbm")
-    .attr("height", "95px")
+    .attr("height", "95")
     .attr("width", f => calcRectWidth(f))
     .append("rect")
     .attr("class", "benchmark")
