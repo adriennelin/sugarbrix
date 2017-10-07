@@ -1,8 +1,14 @@
 /* global d3, food, benchmark */
 
+// Display note about grams of sugar for selected benchmark
+d3.select(".filter-bar")
+    .append("div")
+    .text("")
+    .attr("id","note");
+
 const margin = {top: 10, right: 10, bottom: 10, left: 10},
   width = 1300 - margin.left - margin.right,
-  height = 500 - margin.top - margin.bottom;
+  height = 4500 - margin.top - margin.bottom;
 
 const svg = d3.select(".chart-box")
      .append("div")
@@ -90,6 +96,7 @@ function calcBenchmarkDim() {
   return benchmarkDim;
 }
 
+// find rectangle width to display quantity of benchmark per item
 function calcRectWidth(foodItem) {
   const sugar = calcDisplayedSugar(foodItem);
   const benchmarkName = getBenchmark();
@@ -160,8 +167,14 @@ function updateChart() {
   const cells = rows.selectAll("td")
     .data(f => { return f; });
 
-  rows.append("td").html(f => {return f.name; })
-        .attr("class", "name");
+  rows.append("td")
+    .append("div")
+    .html(f => {return f.name; })
+    .attr("class", "name")
+    .append("div")
+    .html(f => { return servingText(f); })
+    .attr("class", "serving-text");
+
 
   rows.append("td")
     .append("img")
@@ -170,14 +183,13 @@ function updateChart() {
     .attr("width", "65")
     .attr("height", "55");
 
-  rows.append("td")
-    .attr("class", "td-equal")
-    .html(f => { return servingText(f); })
-    .append("img")
-    .attr("class", "equal")
-    .attr("src", "https://res.cloudinary.com/adrienne/image/upload/v1507140911/sugarbrix/equal_sign.png")
-    .attr("width", "80")
-    .attr("height", "25");
+  // rows.append("td")
+  //   .attr("class", "td-equal")
+  //   .append("img")
+  //   .attr("class", "equal")
+  //   .attr("src", "https://res.cloudinary.com/adrienne/image/upload/v1507140911/sugarbrix/equal_sign.png")
+  //   .attr("width", "80")
+  //   .attr("height", "25");
 
   rows.append("td")
     .attr("class", "sugar-grams")
@@ -223,11 +235,6 @@ function getBenchmarkNote(){
          + `${benchmarkName.sugar_per_unit_in_g}` + " grams of sugar");
 }
 
-// Display note about grams of sugar for selected benchmark
-d3.select("body")
-    .append("div")
-    .text("")
-    .attr("id","note");
 
 // d3.event = document.createEvent('clickEvent');
 // d3.event.initMouseEvent("mousemove");
