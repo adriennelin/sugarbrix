@@ -7,7 +7,7 @@ d3.select(".filter-bar")
     .attr("id","note");
 
 const margin = {top: 10, right: 10, bottom: 10, left: 10},
-  width = 1300 - margin.left - margin.right,
+  width = 1400 - margin.left - margin.right,
   height = 4500 - margin.top - margin.bottom;
 
 const svg = d3.select(".chart-box")
@@ -234,10 +234,3 @@ function getBenchmarkNote(){
   return ("*1 " + `${benchmarkName.name}` + " contains "
          + `${benchmarkName.sugar_per_unit_in_g}` + " grams of sugar");
 }
-
-
-// d3.event = document.createEvent('clickEvent');
-// d3.event.initMouseEvent("mousemove");
-// d3.select("radio#100g").dispatch("click");
-
-updateChart();

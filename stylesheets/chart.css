@@ -1,7 +1,7 @@
 .chart-box {
   margin-top: 4px;
   margin-right: 20px;
-  height: 500px;
+  height: 1000px;
   overflow-y: scroll;
   overflow-x: hidden;
   /*border: 1.5px solid rgba(255, 212, 169, .5);
@@ -52,8 +52,8 @@ td {
 }
 
 .name {
-  width: 120px;
-  font-size: 22px;
+  width: 150px;
+  font-size: 18px;
   vertical-align: middle;
 }
 
