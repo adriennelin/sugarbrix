@@ -14,7 +14,7 @@ The goal is to bring greater awareness of sugar in everyday foods through intera
 
 + Compare sugar levels among a database of 100+ popular food items
 + Benchmark sugar levels against teaspoons of sugar, Krispy Kreme doughnuts, or Hershey's Kisses
-+ Filter by food categories: breakfast, dessert, drinks, fast food, and fruit
++ Filter by food categories: dessert, drinks, fast food, and fruit
 + Toggle unit size between 1 serving or 100 grams
 + Sort by net sugar weight or by percentage of weight
 
